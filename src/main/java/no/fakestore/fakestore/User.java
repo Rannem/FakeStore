@@ -3,19 +3,19 @@ package no.fakestore.fakestore;
 public class User {
     private String firstName;
     private String lastName;
-    private boolean isMale;
+    private Enum<Gender> gender;
     private String eMail;
     private int phoneNumber;
-    private int dayOfBirth;
+    private String dayOfBirth;
     private String userName;
     private String passWord;
     private String address;
     private int zipCode;
 
-    public User(String firstName, String lastName, boolean isMale, String eMail, int phoneNumber, int dayOfBirth, String userName, String passWord, String address, int zipCode) {
+    public User(String firstName, String lastName, Enum<Gender> gender, String eMail, int phoneNumber, String dayOfBirth, String userName, String passWord, String address, int zipCode) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.isMale = isMale;
+        this.gender = gender;
         this.eMail = eMail;
         this.phoneNumber = phoneNumber;
         this.dayOfBirth = dayOfBirth;
@@ -33,8 +33,8 @@ public class User {
         return lastName;
     }
 
-    public boolean isMale() {
-        return isMale;
+    public Enum<Gender> getGender() {
+        return gender;
     }
 
     public String geteMail() {
@@ -63,5 +63,23 @@ public class User {
 
     public int getZipCode() {
         return zipCode;
+    }
+
+    @Override
+    public String toString() {
+
+        return String.format("Firstname: %s \nLastname: %s \nGender: %b")
+        return "User{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", isMale=" + isMale +
+                ", eMail='" + eMail + '\'' +
+                ", phoneNumber=" + phoneNumber +
+                ", dayOfBirth=" + dayOfBirth +
+                ", userName='" + userName + '\'' +
+                ", passWord='" + passWord + '\'' +
+                ", address='" + address + '\'' +
+                ", zipCode=" + zipCode +
+                '}';
     }
 }
