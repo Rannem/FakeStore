@@ -45,7 +45,7 @@ public class User {
         return phoneNumber;
     }
 
-    public int getDayOfBirth() {
+    public String getDayOfBirth() {
         return dayOfBirth;
     }
 
@@ -68,11 +68,11 @@ public class User {
     @Override
     public String toString() {
 
-        return String.format("Firstname: %s \nLastname: %s \nGender: %b")
+
         return "User{" +
                 "firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
-                ", isMale=" + isMale +
+
                 ", eMail='" + eMail + '\'' +
                 ", phoneNumber=" + phoneNumber +
                 ", dayOfBirth=" + dayOfBirth +
