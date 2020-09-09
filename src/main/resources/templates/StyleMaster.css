@@ -1,0 +1,87 @@
+html, body, .grid-container { height: 100%; margin: 0; }
+* {
+    box-sizing: border-box;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.75fr 0.25fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+    "Header Header Header Header Header"
+    "Nav Nav Nav Nav Nav"
+    "Hero Hero Hero Hero Hero"
+    "Hero Hero Hero Hero Hero"
+    "Hero Hero Hero Hero Hero"
+    "Main Main Main Main ads"
+    "Main Main Main Main ads"
+    "Main Main Main Main ads"
+    "Footer Footer Footer Footer Footer";
+}
+
+.Header {
+    display: grid;
+    grid-template-columns: 1.5fr 0.5fr;
+    grid-template-rows: 1fr;
+    gap: 1px 1px;
+    grid-template-areas:
+    ". SignIn";
+    grid-area: Header;
+}
+
+.SignIn { grid-area: SignIn; }
+
+.Nav {
+    display: grid;
+    grid-template-columns: 1.5fr 0.5fr;
+    grid-template-rows: 1fr;
+    gap: 1px 1px;
+    grid-template-areas:
+    ". Search";
+    grid-area: Nav;
+}
+
+.Search { grid-area: Search; }
+
+.Hero { grid-area: Hero; }
+
+.Main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1px 1px;
+    grid-template-areas:
+    "Product1 Product2 Product3"
+    "Product4 Product5 Product6";
+    grid-area: Main;
+}
+
+.Product2 { grid-area: Product2; }
+
+.Product1 { grid-area: Product1; }
+
+.Product3 { grid-area: Product3; }
+
+.Product4 { grid-area: Product4; }
+
+.Product5 { grid-area: Product5; }
+
+.Product6 { grid-area: Product6; }
+
+.ads { grid-area: ads; }
+
+.Footer { grid-area: Footer; }
+
+
+/* For presentation only, no need to copy the code below */
+.grid-container * {
+    border: 1px solid red;
+    position: relative;
+}
+
+.grid-container *:after {
+    content:attr(class);
+    position: absolute;
+    top: 0;
+    left: 0;
+}

@@ -9,5 +9,5 @@ public class FakestoreApplication {
     public static void main(String[] args) {
         SpringApplication.run(FakestoreApplication.class, args);
     }
-
+    
 }
