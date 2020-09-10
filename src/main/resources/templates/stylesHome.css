@@ -6,7 +6,6 @@ html, body, .grid-container { height: 100%; margin: 0; }
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 0.75fr 0.25fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    gap: 0px 0px;
     grid-template-areas:
     "Header Header Header Header Header"
     "Nav Nav Nav Nav Nav"
@@ -75,7 +74,7 @@ html, body, .grid-container { height: 100%; margin: 0; }
 
 /* For presentation only, no need to copy the code below */
 .grid-container * {
-    border: 1px solid red;
+    border: 1px solid #ff0000;
     position: relative;
 }
 

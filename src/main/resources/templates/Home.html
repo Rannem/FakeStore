@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.Thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="StyleMaster.css">
-    <title>Title</title>
+    <link rel="stylesheet" href="stylesHome.css">
+    <title>FakeStore</title>
 </head>
 <body>
 <div class="grid-container">
@@ -15,8 +15,8 @@
     </div>
     <div class="Hero"></div>
     <div class="Main">
+        <div class="Product1" th:text="${book.title}"></div>
         <div class="Product2"></div>
-        <div class="Product1"></div>
         <div class="Product3"></div>
         <div class="Product4"></div>
         <div class="Product5"></div>
