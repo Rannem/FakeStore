@@ -1,0 +1,76 @@
+# curl 'http://localhost:8080/SignUp'
+#  -H 'Connection: keep-alive'
+#  -H 'Cache-Control: max-age=0'
+#  -H 'Upgrade-Insecure-Requests: 1'
+#  -H 'Origin: http://localhost:8080'
+#  -H 'Content-Type: application/x-www-form-urlencoded'
+#  -H 'User-Agent: Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Mobile Safari/537.36'
+#  -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+#  -H 'Sec-Fetch-Site: same-origin'
+#  -H 'Sec-Fetch-Mode: navigate'
+#  -H 'Sec-Fetch-User: ?1'
+#  -H 'Sec-Fetch-Dest: document'
+#  -H 'Referer: http://localhost:8080/SignUp'
+#  -H 'Accept-Language: nb-NO,nb;q=0.9,en-GB;q=0.8,en;q=0.7,no;q=0.6,nn;q=0.5,en-US;q=0.4'
+#  -H 'Cookie: Idea-a496fa04=966c57f6-7f11-44b7-ae91-1560cad6f355; JSESSIONID=C2A60DC7590FA289FB651EF591C52E70'
+#  --data-raw 'firstName=sindre&lastName=sinasdo&gender=MALE&eMail=asjdnfaks&phoneNumber=29816116515&dayOfBirth=2020-09-04&userName=asdfasdf&passWord=avavadv&confirmPassWord=acasdcasd&address=asdfasdf&zipCode=0152'
+#  --compressed
+POST http://localhost:8080/SignUp
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+Origin: http://localhost:8080
+User-Agent: Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Mobile Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Referer: http://localhost:8080/SignUp
+Accept-Language: nb-NO,nb;q=0.9,en-GB;q=0.8,en;q=0.7,no;q=0.6,nn;q=0.5,en-US;q=0.4
+Cookie: Idea-a496fa04=966c57f6-7f11-44b7-ae91-1560cad6f355; JSESSIONID=C2A60DC7590FA289FB651EF591C52E70
+Content-Type: application/x-www-form-urlencoded
+
+firstName=sindre&lastName=sinasdo&gender=MALE&eMail=asjdnfaks&phoneNumber=93071137&dayOfBirth=2020-09-04&userName=asdfasdf&passWord=avavadv&confirmPassWord=acasdcasd&address=asdfasdf&zipCode=0152
+
+###
+
+###
+
+# curl 'http://localhost:8080/SignUp'
+#  -H 'Connection: keep-alive'
+#  -H 'Cache-Control: max-age=0'
+#  -H 'Upgrade-Insecure-Requests: 1'
+#  -H 'Origin: http://localhost:8080'
+#  -H 'Content-Type: application/x-www-form-urlencoded'
+#  -H 'User-Agent: Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Mobile Safari/537.36'
+#  -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+#  -H 'Sec-Fetch-Site: same-origin'
+#  -H 'Sec-Fetch-Mode: navigate'
+#  -H 'Sec-Fetch-User: ?1'
+#  -H 'Sec-Fetch-Dest: document'
+#  -H 'Referer: http://localhost:8080/SignUp'
+#  -H 'Accept-Language: nb-NO,nb;q=0.9,en-GB;q=0.8,en;q=0.7,no;q=0.6,nn;q=0.5,en-US;q=0.4'
+#  -H 'Cookie: Idea-a496fa04=966c57f6-7f11-44b7-ae91-1560cad6f355; JSESSIONID=C2A60DC7590FA289FB651EF591C52E70'
+#  --data-raw 'firstName=sindre&lastName=sinasdo&gender=MALE&eMail=asjdnfaks&phoneNumber=29816116515&dayOfBirth=2020-09-04&userName=asdfasdf&passWord=avavadv&confirmPassWord=acasdcasd&address=asdfasdf&zipCode=0152'
+#  --compressed
+POST http://localhost:8080/SignUp
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+Origin: http://localhost:8080
+User-Agent: Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Mobile Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Referer: http://localhost:8080/SignUp
+Accept-Language: nb-NO,nb;q=0.9,en-GB;q=0.8,en;q=0.7,no;q=0.6,nn;q=0.5,en-US;q=0.4
+Cookie: Idea-a496fa04=966c57f6-7f11-44b7-ae91-1560cad6f355; JSESSIONID=C2A60DC7590FA289FB651EF591C52E70
+Content-Type: application/x-www-form-urlencoded
+
+firstName=sindre&lastName=sinasdo&gender=MALE&eMail=asjdnfaks&phoneNumber=29816116515&dayOfBirth=2020-09-04&userName=asdfasdf&passWord=avavadv&confirmPassWord=acasdcasd&address=asdfasdf&zipCode=0152
+
+###
+

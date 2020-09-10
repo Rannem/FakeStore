@@ -3,7 +3,7 @@ package no.fakestore.fakestore;
 public enum Gender {
 
     MALE("Male"),
-    FEMAL("Female"),
+    FEMALE("Female"),
     OTHER("Prefer not to tell"),
     ;
 

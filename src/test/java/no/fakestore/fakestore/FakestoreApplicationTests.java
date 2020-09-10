@@ -1,13 +1,17 @@
 package no.fakestore.fakestore;
 
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
+import org.junit.Assert;
+import org.junit.Test;
 
-@SpringBootTest
-class FakestoreApplicationTests {
+
+public class FakestoreApplicationTests {
+
 
     @Test
-    void contextLoads() {
-    }
+    public void shouldLoginRannemTrue() {
+        LoginAuthenticator test = new LoginAuthenticator(new UserAccounts());
+        Assert.assertTrue(test.access("Rannem", "test123"));
+        Assert.assertFalse(test.access("Ranem", "test123"));
 
+    }
 }
