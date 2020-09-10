@@ -3,16 +3,17 @@ package no.fakestore.fakestore;
 public class User {
     private String firstName;
     private String lastName;
-    private Enum<Gender> gender;
+    private Gender gender;
     private String eMail;
-    private int phoneNumber;
+    private String phoneNumber;
     private String dayOfBirth;
     private String userName;
     private String passWord;
+    private String confirmPassWord;
     private String address;
-    private int zipCode;
+    private String zipCode;
 
-    public User(String firstName, String lastName, Enum<Gender> gender, String eMail, int phoneNumber, String dayOfBirth, String userName, String passWord, String address, int zipCode) {
+    public User(String firstName, String lastName, Gender gender, String eMail, String phoneNumber, String dayOfBirth, String userName, String passWord, String confirmPassWord, String address, String zipCode) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.gender = gender;
@@ -21,6 +22,7 @@ public class User {
         this.dayOfBirth = dayOfBirth;
         this.userName = userName;
         this.passWord = passWord;
+        this.confirmPassWord = confirmPassWord;
         this.address = address;
         this.zipCode = zipCode;
     }
@@ -33,7 +35,7 @@ public class User {
         return lastName;
     }
 
-    public Enum<Gender> getGender() {
+    public Gender getGender() {
         return gender;
     }
 
@@ -42,7 +44,7 @@ public class User {
     }
 
     public int getPhoneNumber() {
-        return phoneNumber;
+        return Integer.parseInt(phoneNumber);
     }
 
     public String getDayOfBirth() {
@@ -62,7 +64,7 @@ public class User {
     }
 
     public int getZipCode() {
-        return zipCode;
+        return Integer.parseInt(zipCode);
     }
 
     @Override
