@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.Thymeleaf.org">
+<head>
+    <link rel="stylesheet" href="/stylesBookDetails.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap">
+    <meta charset="UTF-8">
+    <meta name="description" content="product">
+    <meta name="keywords" content="FakeStore, Detail, Product">
+    <meta name="author" content="Stig">
+    <title>Book details</title>
+</head>
+
+<body>
+<section class="siteGrid">
+    <main class="productGrid">
+        <h3 class="productH3" th:text="${book.title}"></h3>
+        <p class="detailsText" th:text="'Author: ' + ${book.author}"></p>
+        <p class="detailsText" th:text="'Genre: ' + ${book.genre.getDescription()}"></p>
+        <p class="detailsText" th:text="'Description: ' + ${book.shortDescription}"></p>
+        <p class="detailsText" th:text="'Publisher: ' + ${book.publisher}"></p>
+        <p class="detailsText" th:text="'Release date: ' + ${book.releaseDate}"></p>
+        <p class="detailsText" th:text="'Language: ' + ${book.language}"></p>
+        <p class="detailsText" th:text="'Age info: ' + ${book.recommendedAgeInfo}"></p>
+        <p class="detailsText" th:text="'Price: ' + ${book.price}"></p>
+        <p class="detailsText" th:text="'ProductID: ' + ${book.productId}"></p>
+        <a class="addToCartButton hoverAddToCartButton" href="AddToCart">Add to cart</a>
+    </main>
+    <header class="productPic">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/EVWxps_2Gn0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </header>
+</section>
+</body>
+
+</html>
