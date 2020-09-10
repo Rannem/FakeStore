@@ -9,10 +9,11 @@ public class User {
     private String dayOfBirth;
     private String userName;
     private String passWord;
+
     private String confirmPassWord;
+
     private String address;
     private String zipCode;
-
     public User(String firstName, String lastName, Gender gender, String eMail, String phoneNumber, String dayOfBirth, String userName, String passWord, String confirmPassWord, String address, String zipCode) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -59,6 +60,10 @@ public class User {
         return passWord;
     }
 
+    public String getConfirmPassWord() {
+        return confirmPassWord;
+    }
+
     public String getAddress() {
         return address;
     }
@@ -83,5 +88,13 @@ public class User {
                 ", address='" + address + '\'' +
                 ", zipCode=" + zipCode +
                 '}';
+    }
+
+    public boolean isPasswordEqual(){
+        if (passWord.equals(confirmPassWord)){
+            return true;
+        }else {
+            return false;
+        }
     }
 }

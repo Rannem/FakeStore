@@ -14,7 +14,7 @@
         </div>
         <div class="Body">
             <h3>Sign up</h3>
-            <form th:action="SignUp" th:method="post">
+            <form th:action="SignUp" th:method="post" id="user">
                 <label class="firstname">Firstname </label>
                 <input class="firstname1" name="firstName">
                 <label class="lastname">Lastname </label>
@@ -40,6 +40,7 @@
                 <input class="address1" name="address">
                 <label class="zipcode">ZIP code </label>
                 <input class="zipcode1" name="zipCode">
+                <span class="error" th:if="${passfail}">Error: Password does not match!</span>
                 <input type="submit" class="submit">
             </form>
 

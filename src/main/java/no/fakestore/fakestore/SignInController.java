@@ -22,7 +22,7 @@ public class SignInController {
     }
 
     @PostMapping("/signin")
-    public String login(@RequestParam String username, @RequestParam String password, Model model) {
+        public String login(@RequestParam String username, @RequestParam String password, Model model) {
         if (loginAuthenticator.access(username, password) == true){
         return "kod";
     }else{

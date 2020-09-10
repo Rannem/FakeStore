@@ -48,7 +48,7 @@ form {
     "confirmpassword confirmpassword1"
     "address address1"
     "zipcode zipcode1"
-    ". submit";
+    "error submit";
 }
 .firstname {
     grid-area: firstname;
@@ -86,7 +86,9 @@ form {
 .submit {
     grid-area: submit;
 }
-
+.error {
+    grid-area: error;
+}
 
 .header {
     grid-area: header;
