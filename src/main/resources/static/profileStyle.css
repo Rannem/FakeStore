@@ -3,7 +3,7 @@
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 12px;
-
+    box-sizing: border-box;
 }
 
 body{
@@ -18,28 +18,30 @@ main{
 
 }
 
-main > section{
+main > section {
+    grid-area: login;
     display: flex;
     justify-content: center;
     align-items: center;
 
+
 }
-main > section > .newUser{
-    grid-area: login;
+main > section > .profil{
     width: 500px;
+
 }
 
-main > section > .newUser > h3{
+main > section > .profil > h3{
     font-size: 28px;
     margin-left: 40px;
     margin-bottom: 30px;
 }
 
-form {
+.newUser {
     margin: 10px 40px;
     display: grid;
     gap: 20px 10px;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr;
     justify-content: space-evenly;
     align-content: center;
@@ -50,53 +52,63 @@ form {
     "phonenumber phonenumber1"
     "dayofbirth dayofbirth1"
     "username username1"
-    "password password1"
-    "confirmpassword confirmpassword1"
     "address address1"
-    "zipcode zipcode1"
-    "error submit";
+    "zipcode zipcode1";
 }
 .firstname {
     grid-area: firstname;
 }
+.firstname1 {
+    grid-area: firstname1;
+}
 .lastname {
     grid-area: lastname;
+}
+.lastname1 {
+    grid-area: lastname1;
 }
 .gender {
     grid-area: gender;
 }
+.gender1 {
+    grid-area: gender1;
+}
 .email {
     grid-area: email;
+}
+.email1 {
+    grid-area: email1;
 }
 .phonenumber {
     grid-area: phonenumber;
 }
+.phonenumber1 {
+    grid-area: phonenumber1;
+}
 .dayofbirth {
     grid-area: dayofbirth;
+}
+.dayofbirth1 {
+    grid-area: dayofbirth1;
 }
 .username {
     grid-area: username;
 }
-.password {
-    grid-area: password;
-}
-.confirmpassword {
-    grid-area: confirmpassword;
+.username1 {
+    grid-area: username1;
 }
 .address {
     grid-area: address;
 }
+.address1 {
+    grid-area: address1;
+}
 .zipcode {
     grid-area: zipcode;
 }
-.submit {
-    grid-area: submit;
+.zipcode1 {
+    grid-area: zipcode1;
 }
-.error {
-    grid-area: error;
-}
-
-
 
 
 /* Rignt side*/

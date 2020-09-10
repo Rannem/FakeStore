@@ -7,11 +7,11 @@ import java.util.List;
 
 @Service
 public class UserAccounts {
-    private User user;
-    private List<User> userList = new ArrayList<>();
+    private List<User> userList;
 
 
-    UserAccounts(){
+    public UserAccounts(){
+        userList = new ArrayList<>();
         userList.add(new User("Helge", "Rannem", Gender.MALE, "keke@mail.com", "123456", "2000/03/03", "Rannem", "test123", "test123", "Åsvegen 75", "7715"));
     }
 
@@ -20,8 +20,15 @@ public class UserAccounts {
     }
 
     public void addUserToList(User user){
-        this.user = user;
         userList.add(user);
+    }
+    public User getUser(String input){
+        for (int i = 0; i < userList.size(); i++) {
+            if (input.equals(userList.get(i).getUserName())){
+                return userList.get(i);
+        }
+        }
+        return null;
     }
 
 }
