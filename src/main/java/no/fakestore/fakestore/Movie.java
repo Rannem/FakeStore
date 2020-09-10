@@ -1,9 +1,5 @@
 package no.fakestore.fakestore;
 
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-import java.time.format.FormatStyle;
-
 public class Movie extends Product {
 
     private String title;
@@ -16,7 +12,7 @@ public class Movie extends Product {
     private String releaseDate;
     private String recommendedAgeInfo;
 
-    public Movie(double price, int productId, String title, String director, String writer, MovieGenre genre, String duration, String starring, String shortDescription, LocalDate releaseDate, String recommendedAgeInfo) {
+    public Movie(double price, int productId, String title, String director, String writer, MovieGenre genre, String duration, String starring, String shortDescription, String releaseDate, String recommendedAgeInfo) {
         super(price, productId, "Movie");
         this.title = title;
         this.director = director;
@@ -25,7 +21,7 @@ public class Movie extends Product {
         this.duration = duration;
         this.starring = starring;
         this.shortDescription = shortDescription;
-        this.releaseDate = releaseDate.format(DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM));
+        this.releaseDate = releaseDate;
         this.recommendedAgeInfo = recommendedAgeInfo;
     }
 
