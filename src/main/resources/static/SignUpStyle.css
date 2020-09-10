@@ -21,13 +21,73 @@ html, body, .grid-container {
 }
 Body {
     width: 100vw;
-    height: 100vh;
 }
 
 .Body {
     grid-area: bodyen;
     border:1px solid black;
     background-size: cover;
+}
+
+form {
+    margin: 10px 40px;
+    display: grid;
+    gap: 20px 10px;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-evenly;
+    align-content: center;
+    grid-template-areas: "firstname firstname1"
+    "lastname lastname1"
+    "gender gender1"
+    "email email1"
+    "phonenumber phonenumber1"
+    "dayofbirth dayofbirth1"
+    "username username1"
+    "password password1"
+    "confirmpassword confirmpassword1"
+    "address address1"
+    "zipcode zipcode1"
+    "error submit";
+}
+.firstname {
+    grid-area: firstname;
+}
+.lastname {
+    grid-area: lastname;
+}
+.gender {
+    grid-area: gender;
+}
+.email {
+    grid-area: email;
+}
+.phonenumber {
+    grid-area: phonenumber;
+}
+.dayofbirth {
+    grid-area: dayofbirth;
+}
+.username {
+    grid-area: username;
+}
+.password {
+    grid-area: password;
+}
+.confirmpassword {
+    grid-area: confirmpassword;
+}
+.address {
+    grid-area: address;
+}
+.zipcode {
+    grid-area: zipcode;
+}
+.submit {
+    grid-area: submit;
+}
+.error {
+    grid-area: error;
 }
 
 .header {
@@ -44,17 +104,3 @@ Body {
     height: 100%;
 
 }
-
-
-/* For presentation only, no need to copy the code below */
-/*.grid-container * {
-    border: 1px solid red;
-    position: relative;
-}
-
-.grid-container *:after {
-    content:attr(class);
-    position: absolute;
-    top: 0;
-    left: 0;
-}*/
