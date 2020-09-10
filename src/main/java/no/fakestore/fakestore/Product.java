@@ -16,23 +16,11 @@ public class Product {
         return price;
     }
 
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
     public int getProductId() {
         return productId;
     }
 
-    public void setProductId(int productId) {
-        this.productId = productId;
-    }
-
     public String getProductType() {
         return productType;
-    }
-
-    public void setProductType(String productType) {
-        this.productType = productType;
     }
 }

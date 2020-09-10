@@ -1,6 +1,8 @@
 package no.fakestore.fakestore;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.format.FormatStyle;
 
 public class Movie extends Product {
 
@@ -11,7 +13,7 @@ public class Movie extends Product {
     private String duration;
     private String starring;
     private String shortDescription;
-    private LocalDate releaseDate;
+    private String releaseDate;
     private String recommendedAgeInfo;
 
     public Movie(double price, int productId, String title, String director, String writer, MovieGenre genre, String duration, String starring, String shortDescription, LocalDate releaseDate, String recommendedAgeInfo) {
@@ -23,7 +25,7 @@ public class Movie extends Product {
         this.duration = duration;
         this.starring = starring;
         this.shortDescription = shortDescription;
-        this.releaseDate = releaseDate;
+        this.releaseDate = releaseDate.format(DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM));
         this.recommendedAgeInfo = recommendedAgeInfo;
     }
 
@@ -31,71 +33,35 @@ public class Movie extends Product {
         return title;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
     public String getDirector() {
         return director;
-    }
-
-    public void setDirector(String director) {
-        this.director = director;
     }
 
     public String getWriter() {
         return writer;
     }
 
-    public void setWriter(String writer) {
-        this.writer = writer;
-    }
-
     public MovieGenre getGenre() {
         return genre;
-    }
-
-    public void setGenre(MovieGenre genre) {
-        this.genre = genre;
     }
 
     public String getDuration() {
         return duration;
     }
 
-    public void setDuration(String duration) {
-        this.duration = duration;
-    }
-
     public String getStarring() {
         return starring;
-    }
-
-    public void setStarring(String starring) {
-        this.starring = starring;
     }
 
     public String getShortDescription() {
         return shortDescription;
     }
 
-    public void setShortDescription(String shortDescription) {
-        this.shortDescription = shortDescription;
-    }
-
-    public LocalDate getReleaseDate() {
+    public String getReleaseDate() {
         return releaseDate;
-    }
-
-    public void setReleaseDate(LocalDate releaseDate) {
-        this.releaseDate = releaseDate;
     }
 
     public String getRecommendedAgeInfo() {
         return recommendedAgeInfo;
-    }
-
-    public void setRecommendedAgeInfo(String recommendedAgeInfo) {
-        this.recommendedAgeInfo = recommendedAgeInfo;
     }
 }
