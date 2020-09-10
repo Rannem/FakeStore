@@ -1,0 +1,408 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+}
+
+.header {
+    width: 100%;
+    height: 1080px;
+    background-image: url(Assets/header.svg);
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;;
+}
+.navigation {
+    width: 1518px;
+    height: 50px;
+    margin: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo {
+    background-image: url(Assets/logo.svg);
+    height: 50px;
+    width: 50px;
+    margin: 0 25px 0 0;
+}
+.allNavButtons {
+    margin: 0 0 0 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+.navButton {
+    margin: 0 20px 0 20px;
+    font-family: 'Roboto';
+    font-size: 18px;
+    color: #D2D2D2;
+    text-decoration: none;
+    transition: all 0.5s;
+}
+
+.loginButtons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    transition: all 1s;
+}
+.signIn {
+    border: 1px solid white;
+    border-radius: 30px;
+    padding: 10px 30px;
+}
+.hover:hover {
+    transform: scale(1.2, 1.2);
+    color: white;
+}
+.headerText {
+    position: relative;
+    bottom: 40px;
+    width: 580px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+.bigText {
+    font-family: 'Archivo';
+    font-weight: 900;
+    font-size: 81px;
+    color: white;
+    margin: 15px;
+}
+.smallText {
+    font-family: 'Roboto';
+    font-size: 18px;
+    color: white;
+    margin: 15px;
+}
+.discoverButton {
+    width: 205px;
+    margin: 15px;
+    font-family: 'Roboto';
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    background-color: #E76F51;
+    border: 1px solid #E76F51;
+    border-radius: 30px;
+    padding: 10px 30px;
+    transition: all 1s;
+}
+.hoverDiscover:hover {
+    transform: scale(1.2, 1.2);
+    box-shadow: 0 2px 20px 2px #383838;
+}
+main {
+    background-color: #FAF4F2;
+    width: 100%;
+    height: 2290px;
+}
+.topGrid {
+    position: relative;
+    bottom: 105px;
+    margin: 0 201px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(357px, 1fr));
+    gap: 15px;
+}
+.gridBox {
+    background: white;
+    border: 1px solid white;
+    border-radius: 20px;
+    height: 312px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    box-shadow: 0 1px 5px #d4d4d4;
+}
+.bonfire {
+    margin: 10px 40px 10px 45px;
+    background-image: url(assets/bonfire.svg);
+    background-repeat: no-repeat;
+    height: 85px;
+    width: 85px;
+}
+.ticket {
+    margin: 10px 40px;
+    background-image: url(assets/tickets.svg);
+    background-repeat: no-repeat;
+    height: 85px;
+    width: 85px;
+}
+.file {
+    margin: 10px 40px 10px 65px;
+    background-image: url(assets/file.svg);
+    background-repeat: no-repeat;
+    height: 85px;
+    width: 85px;
+}
+.fish {
+    margin: 10px 40px;
+    background-image: url(assets/fishing.svg);
+    background-repeat: no-repeat;
+    height: 85px;
+    width: 85px;
+}
+.gridboxH4 {
+    margin: 10px 40px;
+    font-family: 'Archivo';
+    font-weight: 900;
+    font-size: 18px;
+    color: #3B3735;
+}
+.gridboxText {
+    margin: 10px 40px;
+    font-family: 'Roboto';
+    font-size: 16px;
+    color: #3B3735;
+}
+.middleGrid {
+    width: 456px;
+    margin: 10px 732px 30px 720px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    justify-content: center;
+
+}
+.middelPic {
+    margin: 20px;
+    background-image: url(assets/middlepic.svg);
+    background-repeat: no-repeat;
+    height: 90px;
+    width: 90px;
+    justify-self: center;
+}
+.middelText {
+    margin: 10px 40px;
+    font-family: 'Archivo';
+    font-weight: 900;
+    font-size: 40px;
+    color: #3B3735;
+    text-align: center;
+    justify-self: center;
+}
+.destinationGrid {
+    margin: 0 201px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(357px, 1fr));
+    gap: 15px;
+}
+.destinationGridBoxes {
+    padding: 40px;
+    background: white;
+    border: 1px solid white;
+    border-radius: 20px;
+    height: 465px;
+    box-shadow: 0 1px 5px #d4d4d4;
+    display: grid;
+}
+.heartBox {
+    position: relative;
+    bottom: 164px;
+    right: 23px;
+    width: 40px;
+    height: 40px;
+    background: white;
+    border: 1px solid white;
+    border-radius: 15px;
+    justify-self: right;
+}
+.heart {
+    background-image: url(assets/heart.svg);
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 25px;
+    margin: 5px 7px;
+}
+.heart:active {
+    background-image: url(assets/heartfilled.svg);
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 25px;
+    margin: 5px 7px;
+}
+.priceBox {
+    position: relative;
+    bottom: 68px;
+    width: 145px;
+    height: 50px;
+    padding: 10px 18px;
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-weight: bold;
+    color: #E76F51;
+    background: white;
+    border: 1px solid white;
+    border-radius: 15px;
+    justify-self: center;
+    text-align: center;
+}
+.destinationGridBoxesHeader {
+    position: relative;
+    bottom: 40px;
+    font-family: 'Archivo';
+    font-weight: 900;
+    font-size: 18px;
+    color: #3B3735;
+    justify-self: center;
+    text-align: center;
+}
+.destinationGridBoxesText {
+    position: relative;
+    bottom: 30px;
+    width: 277px;
+    font-family: 'Roboto';
+    font-size: 16px;
+    color: #3B3735;
+    justify-self: center;
+    text-align: center;
+}
+.readMoreButton {
+    width: 185px;
+    font-family: 'Roboto';
+    font-size: 18px;
+    color: #919191;
+    text-decoration: none;
+    background-color: #f3f3f3;
+    border: 1px solid #f3f3f3;
+    border-radius: 30px;
+    padding: 10px 35px 5px 30px;
+    justify-self: center;
+    text-align: center;
+    transition: all 1s;
+}
+.hoverReadMore:hover {
+    transform: scale(1.1, 1.1);
+    box-shadow: 0 2px 10px 2px #d4d4d4;
+}
+.destinationPicture1 {
+    background-image: url(assets/Trickle.svg);
+    background-repeat: no-repeat;
+    height: 180px;
+    width: 277px;
+    border-radius: 20px;
+    justify-self: center;
+}
+.destinationPicture2 {
+    background-image: url(assets/dragonfly.svg);
+    background-repeat: no-repeat;
+    height: 180px;
+    width: 277px;
+    border-radius: 20px;
+    justify-self: center;
+}
+.destinationPicture3 {
+    background-image: url(assets/TinyCabin.svg);
+    background-repeat: no-repeat;
+    height: 180px;
+    width: 277px;
+    border-radius: 20px;
+    justify-self: center;
+}
+.destinationPicture4 {
+    background-image: url(assets/TheStuga.svg);
+    background-repeat: no-repeat;
+    height: 180px;
+    width: 277px;
+    border-radius: 20px;
+    justify-self: center;
+}
+.destinationPicture5 {
+    background-image: url(assets/LuxuryTiny.svg);
+    background-repeat: no-repeat;
+    height: 180px;
+    width: 277px;
+    border-radius: 20px;
+    justify-self: center;
+}
+.destinationPicture6 {
+    background-image: url(assets/TheSummit.svg);
+    background-repeat: no-repeat;
+    height: 180px;
+    width: 277px;
+    border-radius: 20px;
+    justify-self: center;
+}
+.destinationPicture7 {
+    background-image: url(assets/Kindred.svg);
+    background-repeat: no-repeat;
+    height: 180px;
+    width: 277px;
+    border-radius: 20px;
+    justify-self: center;
+}
+.destinationPicture8 {
+    background-image: url(assets/TheHermit.svg);
+    background-repeat: no-repeat;
+    height: 180px;
+    width: 277px;
+    border-radius: 20px;
+    justify-self: center;
+}
+.destinationPicture9 {
+    background-image: url(assets/RedLife.svg);
+    background-repeat: no-repeat;
+    height: 180px;
+    width: 277px;
+    border-radius: 20px;
+    justify-self: center;
+}
+.destinationPicture10 {
+    background-image: url(assets/TheTree.svg);
+    background-repeat: no-repeat;
+    height: 180px;
+    width: 277px;
+    border-radius: 20px;
+    justify-self: center;
+}
+.destinationPicture11 {
+    background-image: url(assets/Barrier.svg);
+    background-repeat: no-repeat;
+    height: 180px;
+    width: 277px;
+    border-radius: 20px;
+    justify-self: center;
+}
+.destinationPicture12 {
+    background-image: url(assets/Ninovan.svg);
+    background-repeat: no-repeat;
+    height: 180px;
+    width: 277px;
+    border-radius: 20px;
+    justify-self: center;
+}
+
+.veiwAllGrid {
+    margin: 60px 850px;
+    width: 205px;
+    display: grid;
+    grid-template-rows: 1fr;
+    justify-content: center;
+}
+.veiwAll {
+    width: 205px;
+    font-family: 'Roboto';
+    font-size: 18px;
+    color: #E76F51;
+    background-color: transparent;
+    text-decoration: none;
+    border: 1px solid #E76F51;
+    border-radius: 30px;
+    padding: 10px 30px;
+    text-align: center;
+    transition: all 1s;
+}
+.veiwAll:hover {
+    transform: scale(1.2, 1.2);
+    box-shadow: 0 2px 20px 2px #d4d4d4;
+}
