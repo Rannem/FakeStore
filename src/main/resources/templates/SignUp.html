@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="/SignUpStyle.css">
+    <title>Fakestore</title>
+</head>
+<body>
+
+    <div class="grid-container">
+        <div class="header">
+
+        </div>
+        <div class="Body">
+            <form th:action="SignUp" th:method="post">
+                <label>Firstname:</label>
+                <input name="firstName">
+                <label>Lastname:</label>
+                <input name="lastName">
+                <label>Gender:</label>
+                <select name="gender">
+                    <option th:each="genderopt : ${T(no.fakestore.fakestore.Gender).values()}"
+                            th:value="${genderopt}" th:text="${genderopt.getDisplayName()}"></option>
+                </select>
+                <label>E-mail</label>
+                <input name="eMail">
+                <label>Phone number:</label>
+                <input name="phoneNumber">
+                <label>Day of birth</label>
+                <input type="date" th:value="${#calendars.format(dateOfBirth,'yyyy-MM-dd')} name="" ">
+
+            </form>
+
+        </div>
+        <div class="footer">
+
+        </div>
+    </div>
+
+</body>
+</html>
