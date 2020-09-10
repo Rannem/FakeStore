@@ -6,7 +6,7 @@
 </head>
 <body>
 <div>
-    <form name="f" th:action="@{/signin}" method="post">
+    <form name="f" th:action="@{/signin}" method="post" >
         <fieldset>
             <legend>FakeStore Signin</legend>
             <label for="username">Username</label>
@@ -16,6 +16,7 @@
             <div class="form-actions">
                 <button type="submit" class="btn">Sign in</button>
             </div>
+            <div th:if="${PasswordIsWrong == true}">Username and/or password is wrong.</div>
         </fieldset>
     </form>
 </div>
