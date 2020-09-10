@@ -1,9 +1,5 @@
 package no.fakestore.fakestore;
 
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-import java.time.format.FormatStyle;
-
 public class Game extends Product {
 
     private String title;
@@ -14,14 +10,14 @@ public class Game extends Product {
     private String releaseDate;
     private String recommendedAgeInfo;
 
-    public Game(double price, int productId, String title, String developer, String platform, GameGenre genre, String shortDescription, LocalDate releaseDate, String recommendedAgeInfo) {
+    public Game(double price, int productId, String title, String developer, String platform, GameGenre genre, String shortDescription, String releaseDate, String recommendedAgeInfo) {
         super(price, productId, "Game");
         this.title = title;
         this.developer = developer;
         this.platform = platform;
         this.genre = genre;
         this.shortDescription = shortDescription;
-        this.releaseDate = releaseDate.format(DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM));
+        this.releaseDate = releaseDate;
         this.recommendedAgeInfo = recommendedAgeInfo;
     }
 

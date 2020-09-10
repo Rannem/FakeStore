@@ -1,30 +1,196 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.Thymeleaf.org">
 <head>
+    <link rel="stylesheet" href="/stylesHome.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo&display=swap">
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="stylesHome.css">
-    <title>FakeStore</title>
+    <meta name="description" content="Design 6">
+    <meta name="keywords" content="Fancy, HTML, CSS">
+    <meta name="author" content="Stig">
+    <meta name="viewport" content="width=device-width, initial-scale-1">
+    <title>Fancy design</title>
 </head>
 <body>
-<div class="grid-container">
-    <div class="Header">
-        <div class="SignIn"></div>
-    </div>
-    <div class="Nav">
-        <div class="Search"></div>
-    </div>
-    <div class="Hero"></div>
-    <div class="Main">
-        <div class="Product1" th:text="${book.title}"></div>
-        <div class="Product2"></div>
-        <div class="Product3"></div>
-        <div class="Product4"></div>
-        <div class="Product5"></div>
-        <div class="Product6"></div>
-    </div>
-    <div class="ads"></div>
-    <div class="Footer"></div>
-</div>
-
+<header class="header">
+    <nav class="navigation">
+        <section class="allNavButtons">
+            <figure class="logo"></figure>
+            <a class="navButton hover" href="Home">Home</a>
+            <a class="navButton hover" href="Books">Books</a>
+            <a class="navButton hover" href="Movies">Movies</a>
+            <a class="navButton hover" href="Games">Games</a>
+            <a class="navButton hover" href="Cart">Cart</a>
+        </section>
+        <section class="loginButtons">
+            <a class="navButton white hover" href="Sign up">Sign up</a>
+            <a class="navButton signIn white hover" href="Sign in">Sign in</a>
+        </section>
+    </nav>
+    <section class="headerText">
+        <h1 class="bigText">
+            Great movies, great prices.
+        </h1>
+        <p class="smallText">
+            A literal shit-ton of amazing movies at amazing prices.
+        </p>
+        <a class="discoverButton hoverDiscover" href="Discover movies">Discover movies</a>
+    </section>
+</header>
+<main>
+    <section class="topGrid">
+        <div class="gridBox">
+            <figure class="bonfire"></figure>
+            <h4 class="gridboxH4">Camping & Day Use</h4>
+            <p class="gridboxText">Return to your favorite spot or discover a new one that’s right for you.</p>
+        </div>
+        <div class="gridBox">
+            <figure class="ticket"></figure>
+            <h4 class="gridboxH4">Tours & Tickets</h4>
+            <p class="gridboxText">Reserve tours and tickets to participate in events.</p>
+        </div>
+        <div class="gridBox">
+            <figure class="file"></figure>
+            <h4 class="gridboxH4">Permits</h4>
+            <p class="gridboxText">Obtain permits for access to high-demand locations.</p>
+        </div>
+        <div class="gridBox">
+            <figure class="fish"></figure>
+            <h4 class="gridboxH4">Recreation Activities</h4>
+            <p class="gridboxText">Find the best spots for hunting, fishing & recreational shooting.</p>
+        </div>
+    </section>
+    <section class="middleGrid">
+        <figure class="middelPic"></figure>
+        <p class="middelText">
+            Explore all of our great products.
+        </p>
+    </section>
+    <section class="destinationGrid">
+        <div class="destinationGridBoxes">
+            <figure class="destinationPicture1"></figure>
+            <div class="heartBox">
+                <figure class="heart"></figure>
+            </div>
+            <div class="priceBox">$36/night</div>
+            <h4 class="destinationGridBoxesHeader">Trickle Creek Ranch</h4>
+            <p class="destinationGridBoxesText">Book unique camping experiences on over 300,000 campsites.</p>
+            <a class="readMoreButton hoverReadMore" href="Read More">Read More</a>
+        </div>
+        <div class="destinationGridBoxes">
+            <figure class="destinationPicture2"></figure>
+            <div class="heartBox">
+                <figure class="heart"></figure>
+            </div>
+            <div class="priceBox">$36/night</div>
+            <h4 class="destinationGridBoxesHeader">Dragonfly Tiny Cabin</h4>
+            <p class="destinationGridBoxesText">Book unique camping experiences on over 300,000 campsites.</p>
+            <a class="readMoreButton hoverReadMore" href="Read More">Read More</a>
+        </div>
+        <div class="destinationGridBoxes">
+            <figure class="destinationPicture3"></figure>
+            <div class="heartBox">
+                <figure class="heart"></figure>
+            </div>
+            <div class="priceBox">$36/night</div>
+            <h4 class="destinationGridBoxesHeader">Tiny Cabin in the mountains</h4>
+            <p class="destinationGridBoxesText">Book unique camping experiences on over 300,000 campsites.</p>
+            <a class="readMoreButton hoverReadMore" href="Read More">Read More</a>
+        </div>
+        <div class="destinationGridBoxes">
+            <figure class="destinationPicture4"></figure>
+            <div class="heartBox">
+                <figure class="heart"></figure>
+            </div>
+            <div class="priceBox">$36/night</div>
+            <h4 class="destinationGridBoxesHeader">The Stuga</h4>
+            <p class="destinationGridBoxesText">Book unique camping experiences on over 300,000 campsites.</p>
+            <a class="readMoreButton hoverReadMore" href="Read More">Read More</a>
+        </div>
+        <div class="destinationGridBoxes">
+            <figure class="destinationPicture5"></figure>
+            <div class="heartBox">
+                <figure class="heart"></figure>
+            </div>
+            <div class="priceBox">$36/night</div>
+            <h4 class="destinationGridBoxesHeader">Luxury Tiny Beach Cabin</h4>
+            <p class="destinationGridBoxesText">Book unique camping experiences on over 300,000 campsites.</p>
+            <a class="readMoreButton hoverReadMore" href="Read More">Read More</a>
+        </div>
+        <div class="destinationGridBoxes">
+            <figure class="destinationPicture6"></figure>
+            <div class="heartBox">
+                <figure class="heart"></figure>
+            </div>
+            <div class="priceBox">$36/night</div>
+            <h4 class="destinationGridBoxesHeader">The Summit Cabin</h4>
+            <p class="destinationGridBoxesText">Book unique camping experiences on over 300,000 campsites.</p>
+            <a class="readMoreButton hoverReadMore" href="Read More">Read More</a>
+        </div>
+        <div class="destinationGridBoxes">
+            <figure class="destinationPicture7"></figure>
+            <div class="heartBox">
+                <figure class="heart"></figure>
+            </div>
+            <div class="priceBox">$36/night</div>
+            <h4 class="destinationGridBoxesHeader">Kindred Spirits Cabin</h4>
+            <p class="destinationGridBoxesText">Book unique camping experiences on over 300,000 campsites.</p>
+            <a class="readMoreButton hoverReadMore" href="Read More">Read More</a>
+        </div>
+        <div class="destinationGridBoxes">
+            <figure class="destinationPicture8"></figure>
+            <div class="heartBox">
+                <figure class="heart"></figure>
+            </div>
+            <div class="priceBox">$36/night</div>
+            <h4 class="destinationGridBoxesHeader">The Hermitage Cabin</h4>
+            <p class="destinationGridBoxesText">Book unique camping experiences on over 300,000 campsites.</p>
+            <a class="readMoreButton hoverReadMore" href="Read More">Read More</a>
+        </div>
+        <div class="destinationGridBoxes">
+            <figure class="destinationPicture9"></figure>
+            <div class="heartBox">
+                <figure class="heart"></figure>
+            </div>
+            <div class="priceBox">$36/night</div>
+            <h4 class="destinationGridBoxesHeader">Red Lifeguard Stand</h4>
+            <p class="destinationGridBoxesText">Book unique camping experiences on over 300,000 campsites.</p>
+            <a class="readMoreButton hoverReadMore" href="Read More">Read More</a>
+        </div>
+        <div class="destinationGridBoxes">
+            <figure class="destinationPicture10"></figure>
+            <div class="heartBox">
+                <figure class="heart"></figure>
+            </div>
+            <div class="priceBox">$36/night</div>
+            <h4 class="destinationGridBoxesHeader">The Tree House</h4>
+            <p class="destinationGridBoxesText">Book unique camping experiences on over 300,000 campsites.</p>
+            <a class="readMoreButton hoverReadMore" href="Read More">Read More</a>
+        </div>
+        <div class="destinationGridBoxes">
+            <figure class="destinationPicture11"></figure>
+            <div class="heartBox">
+                <figure class="heart"></figure>
+            </div>
+            <div class="priceBox">$36/night</div>
+            <h4 class="destinationGridBoxesHeader">Barrier island elevated tent</h4>
+            <p class="destinationGridBoxesText">Book unique camping experiences on over 300,000 campsites.</p>
+            <a class="readMoreButton hoverReadMore" href="Read More">Read More</a>
+        </div>
+        <div class="destinationGridBoxes">
+            <figure class="destinationPicture12"></figure>
+            <div class="heartBox">
+                <figure class="heart"></figure>
+            </div>
+            <div class="priceBox">$36/night</div>
+            <h4 class="destinationGridBoxesHeader">Ninovan on the Shore</h4>
+            <p class="destinationGridBoxesText">Book unique camping experiences on over 300,000 campsites.</p>
+            <a class="readMoreButton hoverReadMore" href="Read More">Read More</a>
+        </div>
+    </section>
+    <section class="veiwAllGrid">
+        <a class="veiwAll" href="Veiw all">Veiw all</a>
+    </section>
+</main>
 </body>
 </html>
