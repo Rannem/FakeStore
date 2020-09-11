@@ -2,9 +2,9 @@ package no.fakestore.fakestore;
 
 public enum Gender {
 
+    OTHER("Prefer not to tell"),
     MALE("Male"),
     FEMALE("Female"),
-    OTHER("Prefer not to tell"),
     ;
 
     private final String displayName;

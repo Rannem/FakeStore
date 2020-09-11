@@ -3,17 +3,16 @@ package no.fakestore.fakestore;
 public class User {
     private String firstName;
     private String lastName;
-    private Gender gender;
+    private Gender gender = Gender.OTHER;
     private String eMail;
     private String phoneNumber;
     private String dayOfBirth;
     private String userName;
     private String passWord;
-
     private String confirmPassWord;
-
     private String address;
     private String zipCode;
+
     public User(String firstName, String lastName, Gender gender, String eMail, String phoneNumber, String dayOfBirth, String userName, String passWord, String confirmPassWord, String address, String zipCode) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -44,8 +43,8 @@ public class User {
         return eMail;
     }
 
-    public int getPhoneNumber() {
-        return Integer.parseInt(phoneNumber);
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
 
     public String getDayOfBirth() {
@@ -68,8 +67,8 @@ public class User {
         return address;
     }
 
-    public int getZipCode() {
-        return Integer.parseInt(zipCode);
+    public String getZipCode() {
+        return zipCode;
     }
 
     @Override

@@ -9,12 +9,14 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class SignInController {
-    public LoginAuthenticator loginAuthenticator;
+    private LoginAuthenticator loginAuthenticator;
+    private UserAccounts userAccounts;
 
-    @Autowired
-    public SignInController(LoginAuthenticator loginAuthenticator) {
+    public SignInController(LoginAuthenticator loginAuthenticator, UserAccounts userAccounts) {
         this.loginAuthenticator = loginAuthenticator;
+        this.userAccounts = userAccounts;
     }
+
 
     @GetMapping("/signin")
     public String login() {
@@ -24,11 +26,12 @@ public class SignInController {
     @PostMapping("/signin")
         public String login(@RequestParam String username, @RequestParam String password, Model model) {
         if (loginAuthenticator.access(username, password) == true){
-        return "kod";
-    }else{
+            model.addAttribute("user", this.userAccounts.getUser(username));
+            return "myprofile";
+        }else{
         model.addAttribute("PasswordIsWrong", true);
-        return "signin";
-    }
+            return "signin";
+        }
     }
 
 }
