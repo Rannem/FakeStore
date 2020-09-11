@@ -4,8 +4,6 @@ import org.springframework.ui.Model;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import java.util.concurrent.ThreadLocalRandom;
-
 
 @Controller
 public class HomeController {
@@ -27,6 +25,9 @@ public class HomeController {
         model.addAttribute("book3", this.bookLibrary.getBooks().get(2));
         model.addAttribute("book4", this.bookLibrary.getBooks().get(3));
         model.addAttribute("movie", this.movieLibrary.getMovies().get(0));
+        model.addAttribute("movie2", this.movieLibrary.getMovies().get(1));
+        model.addAttribute("movie3", this.movieLibrary.getMovies().get(2));
+        model.addAttribute("movie4", this.movieLibrary.getMovies().get(3));
         model.addAttribute("game", this.gameLibrary.getGames().get(0));
         return "Home";
     }

@@ -28,14 +28,14 @@ public class DetailsController {
     }
 
     @GetMapping("/Movie")
-    public String movieDetails(Model model) {
-        model.addAttribute("movie", this.movieLibrary.getMovies().get(0));
+    public String movieDetails(Model model, @RequestParam(defaultValue = "0") int x) {
+        model.addAttribute("movie", this.movieLibrary.getMovies().get(x));
         return "MovieDetails";
     }
 
     @GetMapping("/Game")
-    public String gameDetails(Model model) {
-        model.addAttribute("game", this.gameLibrary.getGames().get(0));
+    public String gameDetails(Model model, @RequestParam(defaultValue = "0") int x) {
+        model.addAttribute("game", this.gameLibrary.getGames().get(x));
         return "GameDetails";
     }
 }
