@@ -36,12 +36,14 @@ main > section > .profil > h3{
     margin-left: 40px;
     margin-bottom: 30px;
     color: #E76F51;
+    margin-block-end: 0px;
+
 }
 
 .newUser {
-    margin: 10px 40px;
+    margin: 5px 40px;
     display: grid;
-    gap: 20px 10px;
+    gap: 30px 10px;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr;
     justify-content: space-evenly;
@@ -111,12 +113,13 @@ main > section > .profil > h3{
 .zipcode1 {
     grid-area: zipcode1;
 }
-.loginbuttom {
+.buttonlink {
     grid-area: back;
 }
-form > .loginbuttom > button {
+.discoverButton {
     width: 205px;
     margin: 15px;
+    font-size: 18px;
     color: white;
     text-decoration: none;
     background-color: #E76F51;
@@ -124,25 +127,22 @@ form > .loginbuttom > button {
     border-radius: 30px;
     padding: 10px 30px;
     transition: all 1s;
-    font: 400 13.3333px Roboto;
+}
+.hoverDiscover:hover {
+    transform: scale(1.2, 1.2);
+    box-shadow: 0 2px 20px 2px #383838;
 }
 
 
 /* Rignt side*/
 
 main > figure{
-    background-image: url(assets/Card\ Base.svg);
+    background-image: url(/assets/Vforvendetta.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     width: 100%;
     grid-area: image;
-
-}
-main > figure > p {
-    font-size: 28px;
-    color: white;
-    margin: 40px;
 }
 
 
