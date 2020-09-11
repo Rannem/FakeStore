@@ -57,6 +57,10 @@ public class Book extends Product {
         return recommendedAgeInfo;
     }
 
+    public String getPhoto() {
+        return photo;
+    }
+
     @Override
     public String toString() {
 
@@ -73,9 +77,5 @@ public class Book extends Product {
                 ", recommendedAgeInfo='" + recommendedAgeInfo + '\'' +
                 ", photo='" + photo + '\'' +
                 '}';*/
-    }
-
-    public String getPhoto() {
-        return photo;
     }
 }

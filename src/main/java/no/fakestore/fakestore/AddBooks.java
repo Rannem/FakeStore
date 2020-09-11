@@ -12,7 +12,7 @@ public class AddBooks {
 
     public AddBooks() {
         books = new ArrayList<>();
-        books.add(new Book("20.00", 10001, "Fox in Sox", "Dr.Seuss", "Random House", BookGenre.CHILDREN, "Awesome children's book.", "June 19, 1965", "English", "For all ages.", "Assets/foxinsox.png"));
+        books.add(new Book("20.00", 10001, "Fox in Sox", "Dr.Seuss", "Random House", BookGenre.CHILDREN, "Awesome children's book.", "June 19, 1965", "English", "For all ages.", "/Assets/foxinsox.png"));
     }
 
     public List<Book> getBooks() {

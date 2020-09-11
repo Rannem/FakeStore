@@ -56,7 +56,7 @@ public class CartController {
         double total = 0;
         for (Product item:
              handlekurv) {
-            total += item.getPrice();
+            total += Double.parseDouble(item.getPrice());
         }
         model.addAttribute("handlekurv", handlekurv);
         model.addAttribute("total", total);

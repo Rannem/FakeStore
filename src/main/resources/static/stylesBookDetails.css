@@ -18,6 +18,11 @@ body {
     justify-self: center;
     align-self: center;
 }
+.picture {
+    height: 500px;
+    width: 300px;
+    object-fit: contain;
+}
 
 .productGrid {
     width: 287px;
