@@ -1,7 +1,7 @@
 *{
     box-sizing: border-box;
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 12px;
     box-sizing: border-box;
 }
@@ -16,7 +16,6 @@ main{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "login image";
-
 }
 
 main > section{
@@ -35,6 +34,7 @@ main > section > .loginbox > div{
 }
 main > section > .loginbox > h3{
     font-size: 28px;
+    color: #E76F51;
 }
 main > section > .loginbox > .userpass {
     color: #8C98A9;
@@ -66,7 +66,6 @@ main > section > .loginbox >.loginbuttom{
 main > section > .loginbox > .loginbuttom > button {
     width: 205px;
     margin: 15px;
-    font-family: 'Roboto';
     font-size: 18px;
     color: white;
     text-decoration: none;
@@ -75,6 +74,7 @@ main > section > .loginbox > .loginbuttom > button {
     border-radius: 30px;
     padding: 10px 30px;
     transition: all 1s;
+    font: 400 13.3333px Roboto;
 }
 
 main > section > .loginbox > .creatone > p{
