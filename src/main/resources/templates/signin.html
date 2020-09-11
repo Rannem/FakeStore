@@ -2,23 +2,38 @@
 <html lang="en" xmlns:th="https://thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="/signIn.css">
     <title>Login</title>
 </head>
 <body>
-<div>
-    <form name="f" th:action="@{/signin}" method="post" >
-        <fieldset>
-            <legend>FakeStore Signin</legend>
-            <label for="username">Username</label>
-            <input type="text" id="username" name="username">
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password">
-            <div class="form-actions">
-                <button type="submit" class="btn">Sign in</button>
+<main>
+    <section>
+        <form name="f" th:action="@{/signin}" method="post" class="loginbox">
+            <h3>Sign In</h3>
+            <div class="userpass">
+                <div>
+                    <p for="username">Username</p>
+                    <input type="text" id="username" name="username">
+                </div>
+                <div class="pass">
+                    <p for="password">Password</p>
+                    <input type="password" id="password" name="password">
+                </div>
             </div>
-            <div th:if="${PasswordIsWrong == true}">Username and/or password is wrong.</div>
-        </fieldset>
-    </form>
-</div>
+            <div>
+                <a href="">Forgot Password?</a>
+            </div>
+            <div class="loginbuttom form-actions">
+                <button type="submit" href="" class="login btb hoverDiscover" >LOGIN</button>
+            </div>
+            <div class="creatone">
+                <p>Don’t Have An Account? <a th:href="SignUp">Create One</a></p>
+            </div>
+        </form>
+    </section>
+    <figure>
+        <p>ugotcorona.com</p>
+    </figure>
+</main>
 </body>
 </html>
