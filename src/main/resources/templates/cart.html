@@ -12,15 +12,23 @@
 
 <body>
 <section class="siteGrid">
+    <nav class="navigation">
+        <section class="allNavButtons">
+            <figure class="logo"></figure>
+            <a class="navButton hoverNavButton" th:href="@{/Home}">Home</a>
+            <a class="navButton hoverNavButton" href="">Books</a>
+            <a class="navButton hoverNavButton" href="">Movies</a>
+            <a class="navButton hoverNavButton" href="">Games</a>
+            <a class="navButton hoverNavButton" href="/cart">Cart</a>
+        </section>
+    </nav>
     <main class="productGrid">
-        <ul th:each="product : ${cartlist}">
-            <li th:text="${product.title}"></li>
-            <li th:text="${product.price}"></li>
-            <li>
-                <img th:src="${product.photo}">
-            </li>
+        <ul class="cartlist" th:each="product : ${cartlist}">
+            <li th:text="'Title: ' + ${product.title}"></li>
+            <li th:text="'$' + ${product.price}"></li>
+                <img class="productPic" th:src="${product.photo}">
         </ul>
-        <p th:text="${total}"></p>
+        <p class="totalSum"  th:text="'$' + ${total}"> </p>
     </main>
 
 </section>

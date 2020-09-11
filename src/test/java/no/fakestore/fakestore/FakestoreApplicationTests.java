@@ -10,7 +10,7 @@ public class FakestoreApplicationTests {
     @Test
     public void shouldLoginRannemTrue() {
         LoginAuthenticator test = new LoginAuthenticator(new UserAccounts());
-        Assert.assertTrue(test.access("Rannem", "test123"));
+        Assert.assertTrue(test.access("sindre", "123"));
         Assert.assertFalse(test.access("Ranem", "test123"));
     }
 }
