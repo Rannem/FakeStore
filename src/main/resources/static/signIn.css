@@ -2,7 +2,8 @@
     box-sizing: border-box;
     margin: 0;
     font-family: 'Roboto', sans-serif;
-    font-size: 16px;
+    font-size: 12px;
+    box-sizing: border-box;
 }
 
 body{
@@ -10,113 +11,62 @@ body{
 }
 main{
     width: 100%;
+    background-color: #FAF4F2;
     height: 100vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "login image";
-    background-color: #FAF4F2;
-
 }
 
-main > section {
-    grid-area: login;
+main > section{
     display: flex;
     justify-content: center;
     align-items: center;
 
-
 }
-main > section > .profil{
-    width: 500px;
-
+main > section > .loginbox{
+    grid-area: login;
+    width: 287px;
+    height: 296px;
 }
-
-main > section > .profil > h3{
+main > section > .loginbox > div{
+    margin-bottom: 15px;
+}
+main > section > .loginbox > h3{
     font-size: 28px;
-    margin-left: 40px;
-    margin-bottom: 30px;
     color: #E76F51;
 }
+main > section > .loginbox > .userpass {
+    color: #8C98A9;
+    margin-top: 15px;
+}
+main > section > .loginbox > .userpass > .pass{
+    margin-top: 15px;
+}
+main > section > .loginbox > .userpass > div > input{
+    width: 100%;
+    border-radius: 3px;
+    border: 1px solid #E0E7FF;
+}
+main > section > .loginbox > div > a {
+    text-decoration: none;
+    color: #8C98A9;
+}
+main > section > .loginbox >.loginbuttom{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hoverDiscover:hover {
+    transform: scale(1.2, 1.2);
+    box-shadow: 0 2px 10px 2px #383838;
+}
 
-.newUser {
-    margin: 10px 40px;
-    display: grid;
-    gap: 20px 10px;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
-    justify-content: space-evenly;
-    align-content: center;
-    grid-template-areas: "firstname firstname1"
-    "lastname lastname1"
-    "gender gender1"
-    "email email1"
-    "phonenumber phonenumber1"
-    "dayofbirth dayofbirth1"
-    "username username1"
-    "address address1"
-    "zipcode zipcode1"
-    ". back";
-}
-.firstname {
-    grid-area: firstname;
-}
-.firstname1 {
-    grid-area: firstname1;
-}
-.lastname {
-    grid-area: lastname;
-}
-.lastname1 {
-    grid-area: lastname1;
-}
-.gender {
-    grid-area: gender;
-}
-.gender1 {
-    grid-area: gender1;
-}
-.email {
-    grid-area: email;
-}
-.email1 {
-    grid-area: email1;
-}
-.phonenumber {
-    grid-area: phonenumber;
-}
-.phonenumber1 {
-    grid-area: phonenumber1;
-}
-.dayofbirth {
-    grid-area: dayofbirth;
-}
-.dayofbirth1 {
-    grid-area: dayofbirth1;
-}
-.username {
-    grid-area: username;
-}
-.username1 {
-    grid-area: username1;
-}
-.address {
-    grid-area: address;
-}
-.address1 {
-    grid-area: address1;
-}
-.zipcode {
-    grid-area: zipcode;
-}
-.zipcode1 {
-    grid-area: zipcode1;
-}
-.loginbuttom {
-    grid-area: back;
-}
-form > .loginbuttom > button {
+main > section > .loginbox > .loginbuttom > button {
     width: 205px;
     margin: 15px;
+    font-size: 18px;
     color: white;
     text-decoration: none;
     background-color: #E76F51;
@@ -126,6 +76,17 @@ form > .loginbuttom > button {
     transition: all 1s;
     font: 400 13.3333px Roboto;
 }
+
+main > section > .loginbox > .creatone > p{
+    text-align: center;
+    color: #8C98A9;
+}
+main > section > .loginbox > .creatone > p > a{
+    text-decoration: none;
+    color: #65B3BF
+}
+
+
 
 
 /* Rignt side*/

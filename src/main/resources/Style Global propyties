@@ -1,0 +1,44 @@
+CSS:
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+}
+
+main {
+background-color: #FAF4F2;
+}
+
+h3 {
+color: #E76F51;
+}
+
+button{
+  text-decoration: none;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 205px;
+    margin: 15px;
+    font-family: 'Roboto';
+    font-size: 18px;
+    background-color: #E76F51;
+    border: 1px solid #E76F51;
+    border-radius: 30px;
+    padding: 10px 30px;
+    transition: all 1s;
+}
+.hoverAddToCartButton:hover {
+    transform: scale(1.2, 1.2);
+    box-shadow: 0 2px 20px 2px #383838;
+}
+
+HTML:
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+<meta name="description" content="product">
+<meta name="keywords" content="FakeStore, Detail, Product">
+<meta name="author" content="Stig">

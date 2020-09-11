@@ -12,6 +12,5 @@ public class FakestoreApplicationTests {
         LoginAuthenticator test = new LoginAuthenticator(new UserAccounts());
         Assert.assertTrue(test.access("Rannem", "test123"));
         Assert.assertFalse(test.access("Ranem", "test123"));
-
     }
 }

@@ -22,8 +22,11 @@
         <p class="detailsText" th:text="'Language: ' + ${book.language}"></p>
         <p class="detailsText" th:text="'Age info: ' + ${book.recommendedAgeInfo}"></p>
         <p class="detailsText" th:text="'Price: ' + ${book.price}"></p>
+        <form method="post" action="/cart">
+            <input type="hidden" name="productId" th:value="${book.productId}">
         <p class="detailsText" th:text="'ProductID: ' + ${book.productId}"></p>
-        <a class="addToCartButton hoverAddToCartButton" href="AddToCart">Add to cart</a>
+        <button type="submit" class="addToCartButton hoverAddToCartButton">Add to cart</button>
+        </form>
     </main>
     <header class="productPic">
         <img th:src="${book.photo}">
