@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.Thymeleaf.org">
+<head>
+    <link rel="stylesheet" href="/stylesGameDetails.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap">
+    <meta charset="UTF-8">
+    <meta name="description" content="product">
+    <meta name="keywords" content="FakeStore, Detail, Product">
+    <meta name="author" content="Stig">
+    <title>Game details</title>
+</head>
+
+<body>
+<section class="siteGrid">
+    <main class="productGrid">
+        <h3 class="productH3" th:text="${game.title}"></h3>
+        <p class="detailsText" th:text="'Developer: ' + ${game.developer}"></p>
+        <p class="detailsText" th:text="'Platforms: ' + ${game.platform}"></p>
+        <p class="detailsText" th:text="'Genre: ' + ${game.genre.getDescription()}"></p>
+        <p class="detailsText" th:text="'Description: ' + ${game.shortDescription}"></p>
+        <p class="detailsText" th:text="'Release date: ' + ${game.releaseDate}"></p>
+        <p class="detailsText" th:text="'Age info: ' + ${game.recommendedAgeInfo}"></p>
+        <p class="detailsText" th:text="'Price: ' + ${game.price}"></p>
+        <p class="detailsText" th:text="'ProductID: ' + ${game.productId}"></p>
+        <a class="addToCartButton hoverAddToCartButton" href="AddToCart">Add to cart</a>
+    </main>
+    <header class="productPic">
+        <img th:src="${game.photo}">
+    </header>
+</section>
+</body>
+
+</html>

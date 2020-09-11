@@ -11,8 +11,9 @@ public class Movie extends Product {
     private String shortDescription;
     private String releaseDate;
     private String recommendedAgeInfo;
+    private String photo;
 
-    public Movie(double price, int productId, String title, String director, String writer, MovieGenre genre, String duration, String starring, String shortDescription, String releaseDate, String recommendedAgeInfo) {
+    public Movie(String price, int productId, String title, String director, String writer, MovieGenre genre, String duration, String starring, String shortDescription, String releaseDate, String recommendedAgeInfo, String photo) {
         super(price, productId, "Movie");
         this.title = title;
         this.director = director;
@@ -23,6 +24,7 @@ public class Movie extends Product {
         this.shortDescription = shortDescription;
         this.releaseDate = releaseDate;
         this.recommendedAgeInfo = recommendedAgeInfo;
+        this.photo = photo;
     }
 
     public String getTitle() {
@@ -59,5 +61,9 @@ public class Movie extends Product {
 
     public String getRecommendedAgeInfo() {
         return recommendedAgeInfo;
+    }
+
+    public String getPhoto() {
+        return photo;
     }
 }

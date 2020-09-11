@@ -12,7 +12,7 @@ public class Book extends Product {
     private String recommendedAgeInfo;
     private String photo;
 
-    public Book(double price, int productId, String title, String author, String publisher, BookGenre genre, String shortDescription, String releaseDate, String language, String recommendedAgeInfo, String photo) {
+    public Book(String price, int productId, String title, String author, String publisher, BookGenre genre, String shortDescription, String releaseDate, String language, String recommendedAgeInfo, String photo) {
         super(price, productId, "Book");
         this.title = title;
         this.author = author;
@@ -55,5 +55,9 @@ public class Book extends Product {
 
     public String getRecommendedAgeInfo() {
         return recommendedAgeInfo;
+    }
+
+    public String getPhoto() {
+        return photo;
     }
 }

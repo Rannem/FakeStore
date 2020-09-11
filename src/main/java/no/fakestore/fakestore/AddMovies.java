@@ -12,8 +12,8 @@ public class AddMovies {
 
     public AddMovies() {
         movies = new ArrayList<>();
-        movies.add(new Movie(20.00, 10002, "Tenet ", "Christopher Nolan", "Christopher Nolan", MovieGenre.ACTION, "2h 30min", "John David Washington, Robert Pattinson, Elizabeth Debicki", "Armed with only one word, Tenet, and fighting for the survival of the entire world, a Protagonist journeys through a twilight world of international espionage on a mission that will unfold in something beyond real time.", "\n" +
-                "August 28, 2020", "12 years and above"));
+        movies.add(new Movie("20.00", 10002, "Tenet ", "Christopher Nolan", "Christopher Nolan", MovieGenre.ACTION, "2h 30min", "John David Washington, Robert Pattinson, Elizabeth Debicki", "Amazing movie, starring amazing actors.", "\n" +
+                "August 28, 2020", "12 years and above", "Assets/tenet.jpg"));
     }
 
     public List<Movie> getMovies() {

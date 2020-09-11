@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.Thymeleaf.org">
+<head>
+    <link rel="stylesheet" href="/stylesMovieDetails.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap">
+    <meta charset="UTF-8">
+    <meta name="description" content="product">
+    <meta name="keywords" content="FakeStore, Detail, Product">
+    <meta name="author" content="Stig">
+    <title>Movie details</title>
+</head>
+
+<body>
+<section class="siteGrid">
+    <main class="productGrid">
+        <h3 class="productH3" th:text="${movie.title}"></h3>
+        <p class="detailsText" th:text="'Director: ' + ${movie.director}"></p>
+        <p class="detailsText" th:text="'Writer: ' + ${movie.writer}"></p>
+        <p class="detailsText" th:text="'Genre: ' + ${movie.genre.getDescription()}"></p>
+        <p class="detailsText" th:text="'Description: ' + ${movie.shortDescription}"></p>
+        <p class="detailsText" th:text="'Starring: ' + ${movie.starring}"></p>
+        <p class="detailsText" th:text="'Duration: ' + ${movie.duration}"></p>
+        <p class="detailsText" th:text="'Release date: ' + ${movie.releaseDate}"></p>
+        <p class="detailsText" th:text="'Age info: ' + ${movie.recommendedAgeInfo}"></p>
+        <p class="detailsText" th:text="'Price: ' + ${movie.price}"></p>
+        <p class="detailsText" th:text="'ProductID: ' + ${movie.productId}"></p>
+        <a class="addToCartButton hoverAddToCartButton" href="AddToCart">Add to cart</a>
+    </main>
+    <header class="productPic">
+        <img th:src="${movie.photo}">
+    </header>
+</section>
+</body>
+
+</html>

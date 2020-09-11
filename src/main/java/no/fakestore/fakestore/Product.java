@@ -2,17 +2,17 @@ package no.fakestore.fakestore;
 
 public class Product {
 
-    private double price;
+    private String price;
     private int productId;
     private String productType;
 
-    public Product(double price, int productId, String productType) {
+    public Product(String price, int productId, String productType) {
         this.price = price;
         this.productId = productId;
         this.productType = productType;
     }
 
-    public double getPrice() {
+    public String getPrice() {
         return price;
     }
 

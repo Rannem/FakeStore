@@ -4,6 +4,7 @@ import org.springframework.ui.Model;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
+
 @Controller
 public class HomeController {
 
@@ -23,12 +24,6 @@ public class HomeController {
         model.addAttribute("movie", this.addMovies.getMovies().get(0));
         model.addAttribute("game", this.addGames.getGames().get(0));
         return "Home";
-    }
-
-    @GetMapping("/BookDetails")
-    public String bookDetails(Model model) {
-        model.addAttribute("book", this.addBooks.getBooks().get(0));
-        return "BookDetails";
     }
 
 }

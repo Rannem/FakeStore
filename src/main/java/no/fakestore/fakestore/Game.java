@@ -9,8 +9,9 @@ public class Game extends Product {
     private String shortDescription;
     private String releaseDate;
     private String recommendedAgeInfo;
+    private String photo;
 
-    public Game(double price, int productId, String title, String developer, String platform, GameGenre genre, String shortDescription, String releaseDate, String recommendedAgeInfo) {
+    public Game(String price, int productId, String title, String developer, String platform, GameGenre genre, String shortDescription, String releaseDate, String recommendedAgeInfo, String photo) {
         super(price, productId, "Game");
         this.title = title;
         this.developer = developer;
@@ -19,6 +20,7 @@ public class Game extends Product {
         this.shortDescription = shortDescription;
         this.releaseDate = releaseDate;
         this.recommendedAgeInfo = recommendedAgeInfo;
+        this.photo = photo;
     }
 
     public String getTitle() {
@@ -47,5 +49,9 @@ public class Game extends Product {
 
     public String getRecommendedAgeInfo() {
         return recommendedAgeInfo;
+    }
+
+    public String getPhoto() {
+        return photo;
     }
 }

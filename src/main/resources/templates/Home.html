@@ -67,11 +67,11 @@
     </section>
     <section class="destinationGrid">
         <div class="destinationGridBoxes">
-            <figure class="destinationPicture1"></figure>
-            <div class="priceBox" th:text="${book.price}"></div>
+            <figure class="destinationPicture1" th:style="${'background-image: url(' + book.photo + ');'}"></figure>
+            <div class="priceBox" th:text="'$' + ${book.price}"></div>
             <h4 class="destinationGridBoxesHeader" th:text="${book.title}"></h4>
             <p class="destinationGridBoxesText" th:text="${book.shortDescription}"></p>
-            <a class="readMoreButton hoverReadMore" href="/BookDetails">Read More</a>
+            <a class="readMoreButton hoverReadMore" href="/Details/Book">Read More</a>
         </div>
         <div class="destinationGridBoxes">
             <figure class="destinationPicture2"></figure>
@@ -95,7 +95,7 @@
             <a class="readMoreButton hoverReadMore" href="Read More">Read More</a>
         </div>
         <div class="destinationGridBoxes">
-            <figure class="destinationPicture5"></figure>
+            <figure class="destinationPicture5" th:style="${'background-image: url(' + movie.photo + ');'}"></figure>
             <div class="priceBox">$36/night</div>
             <h4 class="destinationGridBoxesHeader">Luxury Tiny Beach Cabin</h4>
             <p class="destinationGridBoxesText">Book unique camping experiences on over 300,000 campsites.</p>
@@ -123,7 +123,7 @@
             <a class="readMoreButton hoverReadMore" href="Read More">Read More</a>
         </div>
         <div class="destinationGridBoxes">
-            <figure class="destinationPicture9"></figure>
+            <figure class="destinationPicture9" th:style="${'background-image: url(' + game.photo + ');'}"></figure>
             <div class="priceBox">$36/night</div>
             <h4 class="destinationGridBoxesHeader">Red Lifeguard Stand</h4>
             <p class="destinationGridBoxesText">Book unique camping experiences on over 300,000 campsites.</p>
