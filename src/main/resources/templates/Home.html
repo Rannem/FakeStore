@@ -74,25 +74,26 @@
             <a class="readMoreButton hoverReadMore" href="/Details/Book">Read More</a>
         </div>
         <div class="destinationGridBoxes">
-            <figure class="destinationPicture"></figure>
-            <div class="priceBox">$36/night</div>
-            <h4 class="destinationGridBoxesHeader">Dragonfly Tiny Cabin</h4>
-            <p class="destinationGridBoxesText">Book unique camping experiences on over 300,000 campsites.</p>
-            <a class="readMoreButton hoverReadMore" href="Read More">Read More</a>
+            <figure class="destinationPicture" th:style="${'background-image: url(' + book2.photo + ');'}"></figure>
+            <div class="priceBox" th:text="'$' + ${book2.price}">$36/night</div>
+            <h4 class="destinationGridBoxesHeader" th:text="${book2.title}">Dragonfly Tiny Cabin</h4>
+            <p class="destinationGridBoxesText" th:text="${book2.shortDescription}">Book unique camping experiences on over 300,000 campsites.</p>
+            <a class="readMoreButton hoverReadMore" href="/Details/Book?x=1">Read More</a>
+
         </div>
         <div class="destinationGridBoxes">
-            <figure class="destinationPicture"></figure>
-            <div class="priceBox">$36/night</div>
-            <h4 class="destinationGridBoxesHeader">Tiny Cabin in the mountains</h4>
-            <p class="destinationGridBoxesText">Book unique camping experiences on over 300,000 campsites.</p>
-            <a class="readMoreButton hoverReadMore" href="Read More">Read More</a>
+            <figure class="destinationPicture" th:style="${'background-image: url(' + book3.photo + ');'}"></figure>
+            <div class="priceBox" th:text="'$' + ${book3.price}">$36/night</div>
+            <h4 class="destinationGridBoxesHeader" th:text="${book3.title}">Tiny Cabin in the mountains</h4>
+            <p class="destinationGridBoxesText" th:text="${book3.shortDescription}">Book unique camping experiences on over 300,000 campsites.</p>
+            <a class="readMoreButton hoverReadMore" href="/Details/Book?x=2">Read More</a>
         </div>
         <div class="destinationGridBoxes">
-            <figure class="destinationPicture"></figure>
-            <div class="priceBox">$36/night</div>
-            <h4 class="destinationGridBoxesHeader">The Stuga</h4>
-            <p class="destinationGridBoxesText">Book unique camping experiences on over 300,000 campsites.</p>
-            <a class="readMoreButton hoverReadMore" href="Read More">Read More</a>
+            <figure class="destinationPicture" th:style="${'background-image: url(' + book4.photo + ');'}"></figure>
+            <div class="priceBox" th:text="'$' + ${book4.price}">$36/night</div>
+            <h4 class="destinationGridBoxesHeader" th:text="${book4.title}">The Stuga</h4>
+            <p class="destinationGridBoxesText" th:text="${book4.shortDescription}">Book unique camping experiences on over 300,000 campsites.</p>
+            <a class="readMoreButton hoverReadMore" href="/Details/Book?x=3">Read More</a>
         </div>
         <div class="destinationGridBoxes">
             <figure class="destinationPicture" th:style="${'background-image: url(' + movie.photo + ');'}"></figure>

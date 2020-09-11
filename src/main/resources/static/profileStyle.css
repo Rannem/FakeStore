@@ -29,7 +29,7 @@ main > section {
 
 }
 main > section > .profil{
-    width: 500px;
+    margin: 5px 60px;
 
 }
 
@@ -43,6 +43,7 @@ main > section > .profil > h3{
 }
 
 .newUser {
+    width: 400px;
     margin: 5px 40px;
     display: grid;
     gap: 30px 10px;
@@ -119,7 +120,7 @@ main > section > .profil > h3{
     grid-area: back;
 }
 .discoverButton {
-    width: 205px;
+   /* width: 205px;*/
     margin: 15px;
     font-size: 18px;
     color: white;

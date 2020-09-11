@@ -4,6 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 
 @Controller
@@ -21,8 +22,8 @@ public class DetailsController {
     }
 
     @GetMapping("/Book")
-    public String bookDetails(Model model) {
-        model.addAttribute("book", this.bookLibrary.getBooks().get(0));
+    public String bookDetails(Model model, @RequestParam(defaultValue = "0") int x) {
+        model.addAttribute("book", this.bookLibrary.getBooks().get(x));
         return "BookDetails";
     }
 
