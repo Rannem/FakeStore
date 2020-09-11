@@ -26,4 +26,24 @@ public class MovieLibrary {
     public List<Movie> getMovies() {
         return movies;
     }
+
+    public List<Movie> getPage(int page, int pageSize) {
+        int from = Math.max(0,page*pageSize);
+        int to = Math.min(movies.size(),(page+1)*pageSize);
+
+        return movies.subList(from, to);
+    }
+
+    public int numberOfPages(int pageSize) {
+        return (int)Math.ceil((double) movies.size() / pageSize);
+    }
+
+    public Movie getMovie(int id) {
+        for (Movie movie : movies) {
+            if (movie.getProductId() == id) {
+                return movie;
+            }
+        }
+        return null;
+    }
 }

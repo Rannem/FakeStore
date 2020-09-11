@@ -21,4 +21,24 @@ public class GameLibrary {
     public List<Game> getGames() {
         return games;
     }
+
+    public List<Game> getPage(int page, int pageSize) {
+        int from = Math.max(0,page*pageSize);
+        int to = Math.min(games.size(),(page+1)*pageSize);
+
+        return games.subList(from, to);
+    }
+
+    public int numberOfPages(int pageSize) {
+        return (int)Math.ceil((double) games.size() / pageSize);
+    }
+
+    public Game getGame(int id) {
+        for (Game game : games) {
+            if (game.getProductId() == id) {
+                return game;
+            }
+        }
+        return null;
+    }
 }
