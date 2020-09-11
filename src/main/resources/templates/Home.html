@@ -66,91 +66,30 @@
         </p>
     </section>
     <section class="destinationGrid">
-        <div class="destinationGridBoxes">
+        <div class="destinationGridBoxes" th:each="book, stat : ${books}">
             <figure class="destinationPicture" th:style="${'background-image: url(' + book.photo + ');'}"></figure>
             <div class="priceBox" th:text="'$' + ${book.price}"></div>
             <h4 class="destinationGridBoxesHeader" th:text="${book.title}"></h4>
             <p class="destinationGridBoxesText" th:text="${book.shortDescription}"></p>
-            <a class="readMoreButton hoverReadMore" href="/Details/Book">Read More</a>
+            <a class="readMoreButton hoverReadMore" th:href="${'/Details/Book?x='+ stat.index }">Read More</a>
         </div>
-        <div class="destinationGridBoxes">
-            <figure class="destinationPicture" th:style="${'background-image: url(' + book2.photo + ');'}"></figure>
-            <div class="priceBox" th:text="'$' + ${book2.price}"></div>
-            <h4 class="destinationGridBoxesHeader" th:text="${book2.title}"></h4>
-            <p class="destinationGridBoxesText" th:text="${book2.shortDescription}"></p>
-            <a class="readMoreButton hoverReadMore" href="/Details/Book?x=1">Read More</a>
 
-        </div>
-        <div class="destinationGridBoxes">
-            <figure class="destinationPicture" th:style="${'background-image: url(' + book3.photo + ');'}"></figure>
-            <div class="priceBox" th:text="'$' + ${book3.price}"></div>
-            <h4 class="destinationGridBoxesHeader" th:text="${book3.title}"></h4>
-            <p class="destinationGridBoxesText" th:text="${book3.shortDescription}"></p>
-            <a class="readMoreButton hoverReadMore" href="/Details/Book?x=2">Read More</a>
-        </div>
-        <div class="destinationGridBoxes">
-            <figure class="destinationPicture" th:style="${'background-image: url(' + book4.photo + ');'}"></figure>
-            <div class="priceBox" th:text="'$' + ${book4.price}"></div>
-            <h4 class="destinationGridBoxesHeader" th:text="${book4.title}"></h4>
-            <p class="destinationGridBoxesText" th:text="${book4.shortDescription}"></p>
-            <a class="readMoreButton hoverReadMore" href="/Details/Book?x=3">Read More</a>
-        </div>
-        <div class="destinationGridBoxes">
+        <div class="destinationGridBoxes" th:each="movie, stat : ${movies}">
             <figure class="destinationPicture" th:style="${'background-image: url(' + movie.photo + ');'}"></figure>
             <div class="priceBox" th:text="'$' + ${movie.price}"></div>
             <h4 class="destinationGridBoxesHeader" th:text="${movie.title}"></h4>
             <p class="destinationGridBoxesText" th:text="${movie.shortDescription}"></p>
-            <a class="readMoreButton hoverReadMore" href="/Details/Movie">Read More</a>
+            <a class="readMoreButton hoverReadMore" th:href="${'/Details/Movie?x=' + stat.index }">Read More</a>
         </div>
-        <div class="destinationGridBoxes">
-            <figure class="destinationPicture" th:style="${'background-image: url(' + movie2.photo + ');'}"></figure>
-            <div class="priceBox" th:text="'$' + ${movie2.price}"></div>
-            <h4 class="destinationGridBoxesHeader" th:text="${movie2.title}"></h4>
-            <p class="destinationGridBoxesText" th:text="${movie2.shortDescription}"></p>
-            <a class="readMoreButton hoverReadMore" href="/Details/Movie?x=2">Read More</a>
-        </div>
-        <div class="destinationGridBoxes">
-            <figure class="destinationPicture" th:style="${'background-image: url(' + movie3.photo + ');'}"></figure>
-            <div class="priceBox" th:text="'$' + ${movie3.price}"></div>
-            <h4 class="destinationGridBoxesHeader" th:text="${movie3.title}"></h4>
-            <p class="destinationGridBoxesText" th:text="${movie3.shortDescription}"></p>
-            <a class="readMoreButton hoverReadMore" href="/Details/Movie?x=3">Read More</a>
-        </div>
-        <div class="destinationGridBoxes">
-            <figure class="destinationPicture" th:style="${'background-image: url(' + movie4.photo + ');'}"></figure>
-            <div class="priceBox" th:text="'$' + ${movie4.price}"></div>
-            <h4 class="destinationGridBoxesHeader" th:text="${movie4.title}"></h4>
-            <p class="destinationGridBoxesText" th:text="${movie4.shortDescription}"></p>
-            <a class="readMoreButton hoverReadMore" href="/Details/Movie?x=4">Read More</a>
-        </div>
-        <div class="destinationGridBoxes">
+
+        <div class="destinationGridBoxes" th:each="game, stat : ${games}">
             <figure class="destinationPicture" th:style="${'background-image: url(' + game.photo + ');'}"></figure>
             <div class="priceBox" th:text="'$' + ${game.price}"></div>
             <h4 class="destinationGridBoxesHeader" th:text="${game.title}"></h4>
             <p class="destinationGridBoxesText" th:text="${game.shortDescription}"></p>
-            <a class="readMoreButton hoverReadMore" href="/Details/Game?x=0">Read More</a>
+            <a class="readMoreButton hoverReadMore" th:href="${'/Details/Game?x='+ stat.index }">Read More</a>
         </div>
-        <div class="destinationGridBoxes">
-            <figure class="destinationPicture" th:style="${'background-image: url(' + game2.photo + ');'}"></figure>
-            <div class="priceBox" th:text="'$' + ${game2.price}"></div>
-            <h4 class="destinationGridBoxesHeader" th:text="${game2.title}"></h4>
-            <p class="destinationGridBoxesText" th:text="${game2.shortDescription}"></p>
-            <a class="readMoreButton hoverReadMore" href="/Details/Game?x=1">Read More</a>
-        </div>
-        <div class="destinationGridBoxes">
-            <figure class="destinationPicture" th:style="${'background-image: url(' + game3.photo + ');'}"></figure>
-            <div class="priceBox" th:text="'$' + ${game3.price}"></div>
-            <h4 class="destinationGridBoxesHeader" th:text="${game3.title}"></h4>
-            <p class="destinationGridBoxesText" th:text="${game3.shortDescription}"></p>
-            <a class="readMoreButton hoverReadMore" href="/Details/Game?x=2">Read More</a>
-        </div>
-        <div class="destinationGridBoxes">
-            <figure class="destinationPicture" th:style="${'background-image: url(' + game4.photo + ');'}"></figure>
-            <div class="priceBox" th:text="'$' + ${game4.price}"></div>
-            <h4 class="destinationGridBoxesHeader" th:text="${game4.title}"></h4>
-            <p class="destinationGridBoxesText" th:text="${game4.shortDescription}"></p>
-            <a class="readMoreButton hoverReadMore" href="/Details/Game?x=3">Read More</a>
-        </div>
+
     </section>
     <section class="veiwAllGrid">
         <a class="veiwAll" href="Veiw all">Veiw all</a>

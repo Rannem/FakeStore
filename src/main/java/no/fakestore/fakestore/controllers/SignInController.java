@@ -1,5 +1,7 @@
-package no.fakestore.fakestore;
+package no.fakestore.fakestore.controllers;
 
+import no.fakestore.fakestore.LoginAuthenticator;
+import no.fakestore.fakestore.UserAccounts;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

@@ -1,5 +1,6 @@
-package no.fakestore.fakestore;
+package no.fakestore.fakestore.controllers;
 
+import no.fakestore.fakestore.UserAccounts;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
