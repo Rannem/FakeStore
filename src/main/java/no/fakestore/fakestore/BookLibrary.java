@@ -21,4 +21,24 @@ public class BookLibrary {
     public List<Book> getBooks() {
         return books;
     }
+
+    public List<Book> getPage(int page, int pageSize) {
+        int from = Math.max(0,page*pageSize);
+        int to = Math.min(books.size(),(page+1)*pageSize);
+
+        return books.subList(from, to);
+    }
+
+    public int numberOfPages(int pageSize) {
+        return (int)Math.ceil((double) books.size() / pageSize);
+    }
+
+    public Book getBook(int id) {
+        for (Book book : books) {
+            if (book.getProductId() == id) {
+                return book;
+            }
+        }
+        return null;
+    }
 }
