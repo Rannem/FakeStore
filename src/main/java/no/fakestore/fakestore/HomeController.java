@@ -28,6 +28,9 @@ public class HomeController {
         model.addAttribute("book4", this.bookLibrary.getBooks().get(3));
         model.addAttribute("movie", this.movieLibrary.getMovies().get(0));
         model.addAttribute("game", this.gameLibrary.getGames().get(0));
+        model.addAttribute("game2", this.gameLibrary.getGames().get(1));
+        model.addAttribute("game3", this.gameLibrary.getGames().get(2));
+        model.addAttribute("game4", this.gameLibrary.getGames().get(3));
         return "Home";
     }
 

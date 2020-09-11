@@ -128,28 +128,28 @@
             <div class="priceBox" th:text="'$' + ${game.price}"></div>
             <h4 class="destinationGridBoxesHeader" th:text="${game.title}"></h4>
             <p class="destinationGridBoxesText" th:text="${game.shortDescription}"></p>
-            <a class="readMoreButton hoverReadMore" href="/Details/Game">Read More</a>
+            <a class="readMoreButton hoverReadMore" href="/Details/Game?x=0">Read More</a>
         </div>
         <div class="destinationGridBoxes">
-            <figure class="destinationPicture"></figure>
-            <div class="priceBox">$36/night</div>
-            <h4 class="destinationGridBoxesHeader">The Tree House</h4>
-            <p class="destinationGridBoxesText">Book unique camping experiences on over 300,000 campsites.</p>
-            <a class="readMoreButton hoverReadMore" href="Read More">Read More</a>
+            <figure class="destinationPicture" th:style="${'background-image: url(' + game2.photo + ');'}"></figure>
+            <div class="priceBox" th:text="'$' + ${game2.price}">$36/night</div>
+            <h4 class="destinationGridBoxesHeader" th:text="${game2.title}">The Tree House</h4>
+            <p class="destinationGridBoxesText" th:text="${game2.shortDescription}">Book unique camping experiences on over 300,000 campsites.</p>
+            <a class="readMoreButton hoverReadMore" href="/Details/Game?x=1">Read More</a>
         </div>
         <div class="destinationGridBoxes">
-            <figure class="destinationPicture"></figure>
-            <div class="priceBox">$36/night</div>
-            <h4 class="destinationGridBoxesHeader">Barrier island elevated tent</h4>
-            <p class="destinationGridBoxesText">Book unique camping experiences on over 300,000 campsites.</p>
-            <a class="readMoreButton hoverReadMore" href="Read More">Read More</a>
+            <figure class="destinationPicture" th:style="${'background-image: url(' + game3.photo + ');'}"></figure>
+            <div class="priceBox" th:text="'$' + ${game3.price}">$36/night</div>
+            <h4 class="destinationGridBoxesHeader" th:text="${game3.title}">Barrier island elevated tent</h4>
+            <p class="destinationGridBoxesText" th:text="${game3.shortDescription}">Book unique camping experiences on over 300,000 campsites.</p>
+            <a class="readMoreButton hoverReadMore" href="/Details/Game?x=2">Read More</a>
         </div>
         <div class="destinationGridBoxes">
-            <figure class="destinationPicture"></figure>
-            <div class="priceBox">$36/night</div>
-            <h4 class="destinationGridBoxesHeader">Ninovan on the Shore</h4>
-            <p class="destinationGridBoxesText">Book unique camping experiences on over 300,000 campsites.</p>
-            <a class="readMoreButton hoverReadMore" href="Read More">Read More</a>
+            <figure class="destinationPicture" th:style="${'background-image: url(' + game4.photo + ');'}"></figure>
+            <div class="priceBox" th:text="'$' + ${game4.price}">$36/night</div>
+            <h4 class="destinationGridBoxesHeader" th:text="${game4.title}">Ninovan on the Shore</h4>
+            <p class="destinationGridBoxesText" th:text="${game4.shortDescription}">Book unique camping experiences on over 300,000 campsites.</p>
+            <a class="readMoreButton hoverReadMore" href="/Details/Game?x=3">Read More</a>
         </div>
     </section>
     <section class="veiwAllGrid">

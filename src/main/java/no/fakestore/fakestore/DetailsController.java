@@ -34,8 +34,8 @@ public class DetailsController {
     }
 
     @GetMapping("/Game")
-    public String gameDetails(Model model) {
-        model.addAttribute("game", this.gameLibrary.getGames().get(0));
+    public String gameDetails(Model model, @RequestParam(defaultValue = "0") int x) {
+        model.addAttribute("game", this.gameLibrary.getGames().get(x));
         return "GameDetails";
     }
 }
