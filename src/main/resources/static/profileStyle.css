@@ -6,14 +6,15 @@
 }
 
 body{
-    min-height: 100vh;
+    height: 100vh;
 }
 main{
-    width: 100%;
-    height: 100vh;
+  /*  width: 100vw;*/
+    height: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: "login image";
+    grid-template-rows: 0.2fr 0.8fr;
+    grid-template-areas: "nav image""login image";
     background-color: #FAF4F2;
 
 }
@@ -23,6 +24,7 @@ main > section {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 10px 45%;
 
 
 }
@@ -132,7 +134,37 @@ main > section > .profil > h3{
     transform: scale(1.2, 1.2);
     box-shadow: 0 2px 20px 2px #383838;
 }
+/* nav*/
 
+.navigation {
+    grid-area: nav;
+    width: 100%;
+    height: 50px;
+    margin: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo {
+    background-image: url(Assets/logo.svg);
+    height: 50px;
+    width: 50px;
+    margin: 0 25px 0 0;
+}
+.allNavButtons {
+    margin: 0 0 0 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+.navButton {
+    margin: 0 20px 0 20px;
+    font-size: 18px;
+    color: black;
+    text-decoration: none;
+    transition: all 0.5s;
+}
 
 /* Rignt side*/
 
