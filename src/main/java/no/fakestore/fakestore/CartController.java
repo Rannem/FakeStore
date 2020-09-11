@@ -13,11 +13,11 @@ import java.util.List;
 @Controller
 public class CartController {
 
-    private BookLibary bookLibrary;
+    private BookLibrary bookLibrary;
     private MovieLibrary movieLibrary;
     private GameLibrary gameLibrary;
 
-    public CartController(BookLibary bookLibrary, MovieLibrary movieLibrary, GameLibrary gameLibrary) {
+    public CartController(BookLibrary bookLibrary, MovieLibrary movieLibrary, GameLibrary gameLibrary) {
         this.bookLibrary = bookLibrary;
         this.movieLibrary = movieLibrary;
         this.gameLibrary = gameLibrary;

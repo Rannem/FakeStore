@@ -10,19 +10,19 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/Details")
 public class DetailsController {
 
-    private BookLibary bookLibary;
+    private BookLibrary bookLibrary;
     private MovieLibrary movieLibrary;
     private GameLibrary gameLibrary;
 
-    public DetailsController(BookLibary bookLibary, MovieLibrary movieLibrary, GameLibrary gameLibrary) {
-        this.bookLibary = bookLibary;
+    public DetailsController(BookLibrary bookLibrary, MovieLibrary movieLibrary, GameLibrary gameLibrary) {
+        this.bookLibrary = bookLibrary;
         this.movieLibrary = movieLibrary;
         this.gameLibrary = gameLibrary;
     }
 
     @GetMapping("/Book")
     public String bookDetails(Model model) {
-        model.addAttribute("book", this.bookLibary.getBooks().get(0));
+        model.addAttribute("book", this.bookLibrary.getBooks().get(0));
         return "BookDetails";
     }
 
