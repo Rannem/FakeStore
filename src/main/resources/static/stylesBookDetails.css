@@ -10,11 +10,49 @@ body {
 .siteGrid {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.2fr 0.8fr;
+    grid-template-areas: "Nav Nav" "Info Header";
     background-color: #FAF4F2;
     height: 100%;
 }
 
+.navigation {
+    grid-area: Nav;
+    width: 1518px;
+    height: 50px;
+    margin: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo {
+    background-image: url(Assets/logo.svg);
+    height: 50px;
+    width: 50px;
+    margin: 0 25px 0 0;
+}
+.allNavButtons {
+    margin: 0 0 0 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+.navButton {
+    margin: 0 20px 0 20px;
+    font-family: 'Roboto';
+    font-size: 18px;
+    color: black;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+.hoverNavButton:hover {
+    transform: scale(1.2, 1.2);
+    color: black;
+}
+
 .productPic {
+    grid-area: Header;
     justify-self: center;
     align-self: center;
 }
@@ -25,6 +63,7 @@ body {
 }
 
 .productGrid {
+    grid-area: Info;
     width: 287px;
     height: 296px;
     display: grid;

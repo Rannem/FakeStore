@@ -12,6 +12,16 @@
 
 <body>
 <section class="siteGrid">
+    <nav class="navigation">
+        <section class="allNavButtons">
+            <figure class="logo"></figure>
+            <a class="navButton hoverNavButton" th:href="@{/Home}">Home</a>
+            <a class="navButton hoverNavButton" href="Books">Books</a>
+            <a class="navButton hoverNavButton" href="Movies">Movies</a>
+            <a class="navButton hoverNavButton" href="Games">Games</a>
+            <a class="navButton hoverNavButton" href="Cart">Cart</a>
+        </section>
+    </nav>
     <main class="productGrid">
         <h3 class="productH3" th:text="${book.title}"></h3>
         <p class="detailsText" th:text="'Author: ' + ${book.author}"></p>
