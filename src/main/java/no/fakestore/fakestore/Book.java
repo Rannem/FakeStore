@@ -10,8 +10,9 @@ public class Book extends Product {
     private String releaseDate;
     private String language;
     private String recommendedAgeInfo;
+    private String photo;
 
-    public Book(double price, int productId, String title, String author, String publisher, BookGenre genre, String shortDescription, String releaseDate, String language, String recommendedAgeInfo) {
+    public Book(double price, int productId, String title, String author, String publisher, BookGenre genre, String shortDescription, String releaseDate, String language, String recommendedAgeInfo, String photo) {
         super(price, productId, "Book");
         this.title = title;
         this.author = author;
@@ -21,6 +22,7 @@ public class Book extends Product {
         this.releaseDate = releaseDate;
         this.language = language;
         this.recommendedAgeInfo = recommendedAgeInfo;
+        this.photo = photo;
     }
 
     public String getTitle() {

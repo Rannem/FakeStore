@@ -57,7 +57,7 @@ body {
     border-radius: 30px;
     padding: 10px 30px;
 }
-.hover:hover {
+.hoverNavButton:hover {
     transform: scale(1.2, 1.2);
     color: white;
 }
@@ -206,34 +206,9 @@ main {
     box-shadow: 0 1px 5px #d4d4d4;
     display: grid;
 }
-.heartBox {
-    position: relative;
-    bottom: 164px;
-    right: 23px;
-    width: 40px;
-    height: 40px;
-    background: white;
-    border: 1px solid white;
-    border-radius: 15px;
-    justify-self: right;
-}
-.heart {
-    background-image: url(assets/heart.svg);
-    background-repeat: no-repeat;
-    width: 25px;
-    height: 25px;
-    margin: 5px 7px;
-}
-.heart:active {
-    background-image: url(assets/heartfilled.svg);
-    background-repeat: no-repeat;
-    width: 25px;
-    height: 25px;
-    margin: 5px 7px;
-}
 .priceBox {
     position: relative;
-    bottom: 68px;
+    bottom: 30px;
     width: 145px;
     height: 50px;
     padding: 10px 18px;
@@ -276,7 +251,7 @@ main {
     background-color: #f3f3f3;
     border: 1px solid #f3f3f3;
     border-radius: 30px;
-    padding: 10px 35px 5px 30px;
+    padding: 15px 35px 5px 30px;
     justify-self: center;
     text-align: center;
     transition: all 1s;
@@ -286,7 +261,9 @@ main {
     box-shadow: 0 2px 10px 2px #d4d4d4;
 }
 .destinationPicture1 {
-    background-image: url(assets/Trickle.svg);
+    background-image: url(Assets/foxinsox.png);
+    background-position: center;
+    background-size: cover;
     background-repeat: no-repeat;
     height: 180px;
     width: 277px;
@@ -334,7 +311,7 @@ main {
     justify-self: center;
 }
 .destinationPicture7 {
-    background-image: url(assets/Kindred.svg);
+    /*background-image: url();*/
     background-repeat: no-repeat;
     height: 180px;
     width: 277px;
@@ -358,7 +335,7 @@ main {
     justify-self: center;
 }
 .destinationPicture10 {
-    background-image: url(assets/TheTree.svg);
+    /*background-image: url();*/
     background-repeat: no-repeat;
     height: 180px;
     width: 277px;

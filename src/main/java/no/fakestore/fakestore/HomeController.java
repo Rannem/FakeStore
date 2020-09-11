@@ -25,4 +25,10 @@ public class HomeController {
         return "Home";
     }
 
+    @GetMapping("/BookDetails")
+    public String bookDetails(Model model) {
+        model.addAttribute("book", this.addBooks.getBooks().get(0));
+        return "BookDetails";
+    }
+
 }
