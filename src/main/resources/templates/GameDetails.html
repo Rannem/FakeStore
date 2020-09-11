@@ -21,8 +21,11 @@
         <p class="detailsText" th:text="'Release date: ' + ${game.releaseDate}"></p>
         <p class="detailsText" th:text="'Age info: ' + ${game.recommendedAgeInfo}"></p>
         <p class="detailsText" th:text="'Price: ' + ${game.price}"></p>
+        <form method="post" action="/cart">
+            <input type="hidden" name="productId" th:value="${game.productId}">
         <p class="detailsText" th:text="'ProductID: ' + ${game.productId}"></p>
-        <a class="addToCartButton hoverAddToCartButton" href="AddToCart">Add to cart</a>
+        <button type="submit" class="addToCartButton hoverAddToCartButton">Add to cart</button>
+        </form>
     </main>
     <header class="productPic">
         <img class="picture" th:src="${game.photo}">

@@ -23,8 +23,11 @@
         <p class="detailsText" th:text="'Release date: ' + ${movie.releaseDate}"></p>
         <p class="detailsText" th:text="'Age info: ' + ${movie.recommendedAgeInfo}"></p>
         <p class="detailsText" th:text="'Price: ' + ${movie.price}"></p>
-        <p class="detailsText" th:text="'ProductID: ' + ${movie.productId}"></p>
-        <a class="addToCartButton hoverAddToCartButton" href="AddToCart">Add to cart</a>
+        <form method="post" action="/cart">
+            <input type="hidden" name="productId" th:value="${movie.productId}">
+            <p class="detailsText" th:text="'ProductID: ' + ${movie.productId}"></p>
+            <button type="submit" class="addToCartButton hoverAddToCartButton">Add to cart</button>
+        </form>
     </main>
     <header class="productPic">
         <img class="picture" th:src="${movie.photo}">

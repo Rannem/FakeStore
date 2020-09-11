@@ -6,11 +6,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class AddGames {
+public class GameLibrary {
 
     private List<Game> games;
 
-    public AddGames() {
+    public GameLibrary() {
         games = new ArrayList<>();
         games.add(new Game("49.99", 10003, "Minecraft", "Mojang AB", "PC, Console", GameGenre.SANDBOX, "Amazing sandbox game with zombies.", "November 19, 2009", "Suitable for 7+", "/Assets/minecraft.jpg"));
     }

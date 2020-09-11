@@ -13,13 +13,13 @@ import java.util.List;
 @Controller
 public class CartController {
 
-    private AddBooks bookLibrary;
-    private AddMovies addMovies;
-    private AddGames gameLibrary;
+    private BookLibrary bookLibrary;
+    private MovieLibrary movieLibrary;
+    private GameLibrary gameLibrary;
 
-    public CartController(AddBooks bookLibrary, AddMovies addMovies, AddGames gameLibrary) {
+    public CartController(BookLibrary bookLibrary, MovieLibrary movieLibrary, GameLibrary gameLibrary) {
         this.bookLibrary = bookLibrary;
-        this.addMovies = addMovies;
+        this.movieLibrary = movieLibrary;
         this.gameLibrary = gameLibrary;
     }
 
@@ -30,52 +30,40 @@ public class CartController {
     }
 
 
+    List<Product> cartlist = new ArrayList<>();
 
-   /* private Cart productsCart = new Cart();*/
     @PostMapping("/cart")
     public String cart(HttpSession session, @RequestParam int productId, Model model){
-        /*productsCart.addProductToList(product);*/
+
         List<Integer> cart = (List)session.getAttribute("cart");
         if (cart == null) {
             cart = new ArrayList<>();
-            cart.add(productId);
-        }else {
-            cart.add(productId);
         }
-        List<Product> handlekurv = new ArrayList<>();
+        cart.add(productId);
+
         for (int i = 0; i < cart.size(); i++) {
             if (productId == bookLibrary.getBooks().get(i).getProductId()){
-                handlekurv.add(bookLibrary.getBooks().get(i));
+                cartlist.add(bookLibrary.getBooks().get(i));
                 model.addAttribute("book", bookLibrary.getBooks().get(i).toString());
             }
             else if (productId == gameLibrary.getGames().get(i).getProductId()){
-                handlekurv.add(gameLibrary.getGames().get(i));
+                cartlist.add(gameLibrary.getGames().get(i));
                 model.addAttribute("game",gameLibrary.getGames().get(i).getTitle());
+            }
+            else if (productId == movieLibrary.getMovies().get(i).getProductId()){
+                cartlist.add(movieLibrary.getMovies().get(i));
+                model.addAttribute("movie", movieLibrary.getMovies().get(i).getTitle());
             }
         }
         double total = 0;
         for (Product item:
-             handlekurv) {
+             cartlist) {
             total += Double.parseDouble(item.getPrice());
         }
-        model.addAttribute("handlekurv", handlekurv);
+        model.addAttribute("cartlist", cartlist);
         model.addAttribute("total", total);
 
         return "cart";
     }
 }
 
-/*
-
-    @PostMapping("/")
-    public String level1post(HttpSession session, @RequestParam String item){
-        List<String> cart = (List)session.getAttribute("cart");
-        if (cart == null) {
-            cart = new ArrayList<>();
-            session.setAttribute("cart", cart);
-        }
-        cart.add(item);
-
-        return "level1";
-    }
-}*/
