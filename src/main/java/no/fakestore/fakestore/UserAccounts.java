@@ -12,7 +12,7 @@ public class UserAccounts {
 
     public UserAccounts(){
         userList = new ArrayList<>();
-        userList.add(new User("Helge", "Rannem", Gender.MALE, "keke@mail.com", "123456", "2000/03/03", "Rannem", "test123", "test123", "Åsvegen 75", "7715"));
+        userList.add(new User("Helge", "Rannem", Gender.MALE, "keke@mail.com", "123456", "2000/03/03", "sindre", "123", "123", "Åsvegen 75", "7715"));
     }
 
     public List<User> getUserList() {

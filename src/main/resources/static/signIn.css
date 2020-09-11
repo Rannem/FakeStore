@@ -3,7 +3,6 @@
     margin: 0;
     font-family: 'Roboto', sans-serif;
     font-size: 12px;
-    box-sizing: border-box;
 }
 
 body{
@@ -86,24 +85,15 @@ main > section > .loginbox > .creatone > p > a{
     color: #65B3BF
 }
 
-
-
-
 /* Rignt side*/
 
-main > figure{
-    background-image: url(assets/Card\ Base.svg);
+figure{
+    background-image: url(/assets/WatchDogs.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     width: 100%;
     grid-area: image;
-
-}
-main > figure > p {
-    font-size: 28px;
-    color: white;
-    margin: 40px;
 }
 
 
