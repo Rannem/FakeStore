@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/profileStyle.css">
+    <title th:text="${user.firstName}">Profile</title>
+</head>
+<body>
+<main>
+    <section>
+        <div class="profil">
+            <h3 th:text="Profil"></h3>
+            <div th:object="${user}" class="newUser">
+                <label class="firstname">Firstname: </label>
+                <label class="firstname1" th:text="*{firstName}">firstname</label>
+                <label class="lastname">Lastname: </label>
+                <label class="lastname1" th:text="*{lastName}">lastname</label>
+                <label class="gender">Gender: </label>
+                <label class="gender1" th:text="*{gender}"></label>
+                <label class="email">E-mail: </label>
+                <label class="email1" th:text="*{eMail}"></label>
+                <label class="phonenumber">Phone number: </label>
+                <label class="phonenumber1" th:text="*{phoneNumber}"></label>
+                <label class="dayofbirth">Day of birth: </label>
+                <label class="dayofbirth1" th:text="*{dayOfBirth}"></label>
+                <label class="username">Username: </label>
+                <label class="username1" th:text="*{userName}"></label>
+                <label class="address">Address: </label>
+                <label  class="address1" th:text="*{address}"></label>
+                <label class="zipcode" >ZIP code: </label>
+                <label class="zipcode1" th:text="*{zipCode}"></label>
+            </div>
+        </div>
+    </section>
+    <figure>
+        <p>ugotcorona.com</p>
+    </figure>
+</main>
+</body>
+</html>

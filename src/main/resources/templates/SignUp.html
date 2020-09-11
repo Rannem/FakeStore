@@ -6,49 +6,47 @@
     <link rel="stylesheet" href="/SignUpStyle.css">
     <title>Fakestore</title>
 </head>
+
 <body>
-
-    <div class="grid-container">
-        <div class="header">
-
-        </div>
-        <div class="Body">
+<main>
+    <section>
+        <div class="newUser">
             <h3>Sign up</h3>
-            <form th:action="SignUp" th:method="post" id="user">
+            <form th:action="SignUp" th:method="post" id="user" th:object="${user}">
                 <label class="firstname">Firstname </label>
-                <input class="firstname1" name="firstName">
+                <input class="firstname1" th:field="*{firstName}">
                 <label class="lastname">Lastname </label>
-                <input class="lastname1" name="lastName">
+                <input class="lastname1" th:field="*{lastName}">
                 <label class="gender">Gender </label>
                 <select name="gender" class="gender1">
                     <option th:each="genderopt : ${T(no.fakestore.fakestore.Gender).values()}"
                             th:value="${genderopt}" th:text="${genderopt.getDisplayName()}"></option>
                 </select>
                 <label class="email">E-mail</label>
-                <input class="email1" name="eMail">
+                <input class="email1" th:field="*{eMail}">
                 <label class="phonenumber">Phone number </label>
-                <input  class="phonenumber1" name="phoneNumber">
+                <input  class="phonenumber1" th:field="*{phoneNumber}">
                 <label class="dayofbirth">Day of birth</label>
-                <input class="dayofbirth1" type="date"  name="dayOfBirth">
+                <input class="dayofbirth1" type="date"  th:field="*{dayOfBirth}">
                 <label class="username">Username </label>
-                <input class="username1" name="userName">
+                <input class="username1" th:field="*{userName}">
                 <label class="password">Password </label>
-                <input class="password1" type="password" name="passWord">
+                <input class="password1" type="password" th:field="*{passWord}">
                 <label class="confirmpassword">Confirm password </label>
-                <input class="confirmpassword1" type="password" name="confirmPassWord">
+                <input class="confirmpassword1" type="password" th:field="*{confirmPassWord}">
                 <label class="address">Address </label>
-                <input class="address1" name="address">
+                <input class="address1" th:field="*{address}">
                 <label class="zipcode">ZIP code </label>
-                <input class="zipcode1" name="zipCode">
+                <input class="zipcode1" th:field="*{zipCode}">
                 <span class="error" th:if="${passfail}">Error: Password does not match!</span>
                 <input type="submit" class="submit">
             </form>
 
         </div>
-        <div class="footer">
-
-        </div>
-    </div>
-
+    </section>
+    <figure>
+        <p>ugotcorona.com</p>
+    </figure>
+</main>
 </body>
 </html>

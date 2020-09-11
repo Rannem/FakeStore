@@ -18,7 +18,7 @@ public class SignUpController {
     }
 
     @GetMapping("/SignUp")
-    public String signUp(Model model, HttpSession session){
+    public String signUp(Model model, HttpSession session,@ModelAttribute User user){
         if (session.isNew()){
             model.addAttribute("passfail", false);
             return "SignUp";
