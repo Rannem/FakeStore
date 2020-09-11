@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<ul th:each="book : ${book}">
+    <li th:text="${book}"></li>
+</ul>
+<ul  th:each="game : ${game} ">
+    <li th:text="${game}"></li>
+</ul>
+<ul th:each="product : ${handlekurv}">
+    <li th:text="${product.price}"></li>
+</ul>
+<p th:text="${total}"></p>
+</body>
+</html>

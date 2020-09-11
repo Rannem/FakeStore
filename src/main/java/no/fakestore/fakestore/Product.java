@@ -1,5 +1,7 @@
 package no.fakestore.fakestore;
 
+import org.springframework.stereotype.Service;
+
 public class Product {
 
     private double price;

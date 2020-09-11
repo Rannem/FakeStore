@@ -56,4 +56,22 @@ public class Book extends Product {
     public String getRecommendedAgeInfo() {
         return recommendedAgeInfo;
     }
+
+    @Override
+    public String toString() {
+
+        return String.format("Titel: %s, by: %s, Genre: %s", title,author,genre);
+
+       /* return "Book{" +
+                "title='" + title + '\'' +
+                ", author='" + author + '\'' +
+                ", publisher='" + publisher + '\'' +
+                ", genre=" + genre +
+                ", shortDescription='" + shortDescription + '\'' +
+                ", releaseDate='" + releaseDate + '\'' +
+                ", language='" + language + '\'' +
+                ", recommendedAgeInfo='" + recommendedAgeInfo + '\'' +
+                ", photo='" + photo + '\'' +
+                '}';*/
+    }
 }
