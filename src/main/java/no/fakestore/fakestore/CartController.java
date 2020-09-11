@@ -24,8 +24,10 @@ public class CartController {
     }
 
     @GetMapping("/cart")
-    public String cart() {
-
+    public String cart(HttpSession session, Model model) {
+        List<Product> cartlist = new ArrayList<>();
+        List<Integer> cart = (List) session.getAttribute("cart");
+        populateModel(model, cartlist, cart);
         return "cart";
     }
 
@@ -40,6 +42,12 @@ public class CartController {
         }
 
         cart.add(productId);
+        populateModel(model, cartlist, cart);
+
+        return "cart";
+    }
+
+    private void populateModel(Model model, List<Product> cartlist, List<Integer> cart) {
         for (int i = 0; i < bookLibrary.getBooks().size(); i++) {
             for (int j = 0; j < cart.size(); j++) {
                 int cartProductId = cart.get(j);
@@ -75,8 +83,6 @@ public class CartController {
         }
         model.addAttribute("cartlist", cartlist);
         model.addAttribute("total", total);
-
-        return "cart";
     }
 }
 
