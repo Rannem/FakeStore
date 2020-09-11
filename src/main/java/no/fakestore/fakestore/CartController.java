@@ -24,40 +24,53 @@ public class CartController {
     }
 
     @GetMapping("/cart")
-    public String cart(){
+    public String cart() {
 
         return "cart";
     }
 
 
-    List<Product> cartlist = new ArrayList<>();
-
     @PostMapping("/cart")
-    public String cart(HttpSession session, @RequestParam int productId, Model model){
-
-        List<Integer> cart = (List)session.getAttribute("cart");
+    public String cart(HttpSession session, @RequestParam int productId, Model model) {
+        List<Product> cartlist = new ArrayList<>();
+        List<Integer> cart = (List) session.getAttribute("cart");
         if (cart == null) {
             cart = new ArrayList<>();
+            session.setAttribute("cart", cart);
         }
-        cart.add(productId);
 
-        for (int i = 0; i < cart.size(); i++) {
-            if (productId == bookLibrary.getBooks().get(i).getProductId()){
-                cartlist.add(bookLibrary.getBooks().get(i));
-                model.addAttribute("book", bookLibrary.getBooks().get(i).toString());
-            }
-            else if (productId == gameLibrary.getGames().get(i).getProductId()){
-                cartlist.add(gameLibrary.getGames().get(i));
-                model.addAttribute("game",gameLibrary.getGames().get(i).getTitle());
-            }
-            else if (productId == movieLibrary.getMovies().get(i).getProductId()){
-                cartlist.add(movieLibrary.getMovies().get(i));
-                model.addAttribute("movie", movieLibrary.getMovies().get(i).getTitle());
+        cart.add(productId);
+        for (int i = 0; i < bookLibrary.getBooks().size(); i++) {
+            for (int j = 0; j < cart.size(); j++) {
+                int cartProductId = cart.get(j);
+                if (cartProductId == bookLibrary.getBooks().get(i).getProductId()) {
+                    cartlist.add(bookLibrary.getBooks().get(i));
+                }
             }
         }
+
+        for (int i = 0; i < gameLibrary.getGames().size(); i++) {
+            for (int j = 0; j < cart.size(); j++) {
+                int cartProductId = cart.get(j);
+                if (cartProductId == gameLibrary.getGames().get(i).getProductId()) {
+                    cartlist.add(gameLibrary.getGames().get(i));
+                }
+            }
+        }
+
+        for (int i = 0; i < movieLibrary.getMovies().size(); i++) {
+            for (int j = 0; j < cart.size(); j++) {
+                int cartProductId = cart.get(j);
+                if (cartProductId == movieLibrary.getMovies().get(i).getProductId()) {
+                    cartlist.add(movieLibrary.getMovies().get(i));
+                }
+            }
+        }
+
         double total = 0;
-        for (Product item:
-             cartlist) {
+        for (
+                Product item :
+                cartlist) {
             total += Double.parseDouble(item.getPrice());
         }
         model.addAttribute("cartlist", cartlist);

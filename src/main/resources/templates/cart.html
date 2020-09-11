@@ -1,20 +1,29 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.Thymeleaf.org">
 <head>
+    <link rel="stylesheet" href="/cartStyle.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap">
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="description" content="product">
+    <meta name="keywords" content="FakeStore, Detail, Product">
+    <meta name="author" content="Stig">
+    <title>Cart</title>
 </head>
-<body>
 
-<ul th:each="book : ${book}">
-    <li th:text="${book}"></li>
-</ul>
-<ul  th:each="game : ${game} ">
-    <li th:text="${game}"></li>
-</ul>
-<ul th:each="product : ${handlekurv}">
-    <li th:text="${product.price}"></li>
-</ul>
-<p th:text="${total}"></p>
+<body>
+<section class="siteGrid">
+    <main class="productGrid">
+        <ul th:each="product : ${cartlist}">
+            <li th:text="${product.title}"></li>
+            <li th:text="${product.price}"></li>
+            <li>
+                <img th:src="${product.photo}">
+            </li>
+        </ul>
+        <p th:text="${total}"></p>
+    </main>
+
+</section>
 </body>
+
 </html>
