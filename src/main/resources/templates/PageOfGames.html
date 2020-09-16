@@ -25,7 +25,7 @@
     <main class="productGrid">
         <h3>List of games</h3>
         <ul class="gameTitle" th:each="game : ${session.pageOfGames}">
-            <a class="gameLink" th:href="'/games/details?gameId=' + ${game.productId}" th:text="${game.title}"></a>
+            <a class="gameLink" th:href="'/games/details?gameId=' + ${game.productId}" th:text="${game.title}"></a>Game?x=1
             <ul>
                 <li class="gameDetail" th:text="'Developer: ' + ${game.developer}"></li>
                 <li class="gameDetail" th:text="'Price: ' + ${game.price}"></li>
