@@ -1,5 +1,8 @@
 package no.fakestore.fakestore;
 
+import javax.persistence.Entity;
+
+@Entity
 public class Book extends Product {
 
     private String title;
@@ -11,6 +14,10 @@ public class Book extends Product {
     private String language;
     private String recommendedAgeInfo;
     private String photo;
+
+    public Book() {
+        super();
+    }
 
     public Book(String price, int productId, String title, String author, String publisher, BookGenre genre, String shortDescription, String releaseDate, String language, String recommendedAgeInfo, String photo) {
         super(price, productId, "Book");

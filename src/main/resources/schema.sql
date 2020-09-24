@@ -1,1 +1,1 @@
-create schema Fakestore;
+create schema fakestore;
