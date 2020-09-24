@@ -1,12 +1,21 @@
 package no.fakestore.fakestore;
 
-import org.springframework.stereotype.Service;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.MappedSuperclass;
 
+@MappedSuperclass
 public class Product {
 
-    private String price;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int productId;
+    private String price;
     private String productType;
+
+    public Product() {
+    }
 
     public Product(String price, int productId, String productType) {
         this.price = price;
