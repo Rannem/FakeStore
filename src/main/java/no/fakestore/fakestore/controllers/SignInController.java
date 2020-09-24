@@ -1,7 +1,9 @@
+/*
 package no.fakestore.fakestore.controllers;
 
 import no.fakestore.fakestore.LoginAuthenticator;
 import no.fakestore.fakestore.UserAccounts;
+import no.fakestore.fakestore.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -37,3 +39,4 @@ public class SignInController {
     }
 
 }
+*/

@@ -1,3 +1,4 @@
+/*
 package no.fakestore.fakestore.controllers;
 
 import no.fakestore.fakestore.User;
@@ -42,4 +43,4 @@ public class SignUpController {
             return "SignUp";
         }
     }
-}
+*/

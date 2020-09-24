@@ -2,15 +2,13 @@ package no.fakestore.fakestore;
 
 import org.hibernate.validator.constraints.UniqueElements;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 
 @Entity
+@Table(name = "users")
 public class User {
 
     @Id
@@ -32,7 +30,6 @@ public class User {
     private String dayOfBirth;
 
     @Size(min = 3, max = 100, message = "The username most be 3 characters long ")
-    @UniqueElements
     private String userName;
 
     @Size(min = 6, max = 250, message = "The password must have 6 characters")
