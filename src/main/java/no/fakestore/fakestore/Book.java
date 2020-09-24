@@ -1,8 +1,10 @@
 package no.fakestore.fakestore;
 
 import javax.persistence.Entity;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "books")
 public class Book extends Product {
 
     private String title;

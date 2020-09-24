@@ -1,8 +1,6 @@
 package no.fakestore.fakestore.controllers;
 
-import no.fakestore.fakestore.BookLibrary;
-import no.fakestore.fakestore.GameLibrary;
-import no.fakestore.fakestore.MovieLibrary;
+import no.fakestore.fakestore.*;
 import org.springframework.ui.Model;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
