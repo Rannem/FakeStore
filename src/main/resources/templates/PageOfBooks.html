@@ -30,12 +30,17 @@
                 <li class="bookDetail" th:text="'Author: ' + ${book.author}"></li>
                 <li class="bookDetail" th:text="'Price: ' + ${book.price}"></li>
             </ul>
-        </ul><br>
+        </ul>
+        <br>
         <a class="pageLink" th:if="${session.currentPage} != 0" th:href="'/books?page=' + ${session.prev}">Prev</a>
-        <a class="pageLink" th:if="${page} < ${session.currentPage}" th:each="page : ${session.numOfPages}" th:text="${page} + 1" th:href="'/books?page=' + ${page}"></a>
-        <a class="pageLink activeLink" th:if="${page} == ${session.currentPage}" th:each="page : ${session.numOfPages}" th:text="${page} + 1"></a>
-        <a class="pageLink" th:if="${page} > ${session.currentPage}" th:each="page : ${session.numOfPages}" th:text="${page} + 1" th:href="'/books?page=' + ${page}"></a>
-        <a class="pageLink" th:if="${session.currentPage} != ${session.totNumPages}" th:href="'/books?page=' + ${session.next}">Next</a>
+        <a class="pageLink" th:if="${page} < ${session.currentPage}" th:each="page : ${session.numOfPages}"
+           th:text="${page} + 1" th:href="'/books?page=' + ${page}"></a>
+        <a class="pageLink activeLink" th:if="${page} == ${session.currentPage}" th:each="page : ${session.numOfPages}"
+           th:text="${page} + 1"></a>
+        <a class="pageLink" th:if="${page} > ${session.currentPage}" th:each="page : ${session.numOfPages}"
+           th:text="${page} + 1" th:href="'/books?page=' + ${page}"></a>
+        <a class="pageLink" th:if="${session.currentPage} != ${session.totNumPages}"
+           th:href="'/books?page=' + ${session.next}">Next</a>
     </main>
 </section>
 </body>

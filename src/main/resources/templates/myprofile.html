@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="/profileStyle.css">
-    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet">
     <meta name="description" content="Profile">
     <meta name="keywords" content="FakeStore, Profile, MyProfile">
     <meta name="author" content="Sindre">
@@ -13,16 +15,16 @@
 <body>
 
 <main>
-        <nav class="navigation">
-            <section class="allNavButtons">
-                <figure class="logo"></figure>
-                <a class="navButton hoverNavButton" href="Home">Home</a>
-                <a class="navButton hoverNavButton" href="Books">Books</a>
-                <a class="navButton hoverNavButton" href="Movies">Movies</a>
-                <a class="navButton hoverNavButton" href="Games">Games</a>
-                <a class="navButton hoverNavButton" href="/cart">Cart</a>
-            </section>
-        </nav>
+    <nav class="navigation">
+        <section class="allNavButtons">
+            <figure class="logo"></figure>
+            <a class="navButton hoverNavButton" href="Home">Home</a>
+            <a class="navButton hoverNavButton" href="Books">Books</a>
+            <a class="navButton hoverNavButton" href="Movies">Movies</a>
+            <a class="navButton hoverNavButton" href="Games">Games</a>
+            <a class="navButton hoverNavButton" href="/cart">Cart</a>
+        </section>
+    </nav>
     <section>
         <div class="profil">
             <h3 th:text="Profil"></h3>
@@ -42,8 +44,8 @@
                 <label class="username">Username: </label>
                 <label class="username1" th:text="*{userName}"></label>
                 <label class="address">Address: </label>
-                <label  class="address1" th:text="*{address}"></label>
-                <label class="zipcode" >ZIP code: </label>
+                <label class="address1" th:text="*{address}"></label>
+                <label class="zipcode">ZIP code: </label>
                 <label class="zipcode1" th:text="*{zipCode}"></label>
                 <div class="buttonlink">
                     <a class="discoverButton hoverDiscover" href="/Home">Home</a>

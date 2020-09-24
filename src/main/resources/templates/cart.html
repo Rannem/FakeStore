@@ -26,9 +26,9 @@
         <ul class="cartlist" th:each="product : ${cartlist}">
             <li th:text="'Title: ' + ${product.title}"></li>
             <li th:text="'$' + ${product.price}"></li>
-                <img class="productPic" th:src="${product.photo}">
+            <img class="productPic" th:src="${product.photo}">
         </ul>
-        <p class="totalSum"  th:text="'$' + ${total}"> </p>
+        <p class="totalSum" th:text="'$' + ${total}"></p>
     </main>
 
 </section>

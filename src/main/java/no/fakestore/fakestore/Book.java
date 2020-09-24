@@ -64,7 +64,7 @@ public class Book extends Product {
     @Override
     public String toString() {
 
-        return String.format("Titel: %s, by: %s, Genre: %s", title,author,genre);
+        return String.format("Titel: %s, by: %s, Genre: %s", title, author, genre);
 
        /* return "Book{" +
                 "title='" + title + '\'' +

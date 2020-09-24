@@ -89,10 +89,10 @@ public class User {
                 '}';
     }
 
-    public boolean isPasswordEqual(){
-        if (passWord.equals(confirmPassWord)){
+    public boolean isPasswordEqual() {
+        if (passWord.equals(confirmPassWord)) {
             return true;
-        }else {
+        } else {
             return false;
         }
     }

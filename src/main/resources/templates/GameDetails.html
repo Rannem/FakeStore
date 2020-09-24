@@ -33,8 +33,8 @@
         <p class="detailsText" th:text="'Price: ' + ${game.price}"></p>
         <form method="post" action="/cart">
             <input type="hidden" name="productId" th:value="${game.productId}">
-        <p class="detailsText" th:text="'ProductID: ' + ${game.productId}"></p>
-        <button type="submit" class="addToCartButton hoverAddToCartButton">Add to cart</button>
+            <p class="detailsText" th:text="'ProductID: ' + ${game.productId}"></p>
+            <button type="submit" class="addToCartButton hoverAddToCartButton">Add to cart</button>
         </form>
     </main>
     <header class="productPic">

@@ -17,7 +17,7 @@ public class MyProfileController {
 
     //må finne en metode for å finne riktig bruker
     @GetMapping("/profile")
-    public String showProfile(Model model){
+    public String showProfile(Model model) {
         model.addAttribute("user", user.getUserList().get(1));
         return "myprofile";
     }

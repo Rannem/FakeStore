@@ -26,12 +26,14 @@ body {
     align-items: center;
     justify-content: space-between;
 }
+
 .logo {
     background-image: url(Assets/logo.svg);
     height: 50px;
     width: 50px;
     margin: 0 25px 0 0;
 }
+
 .allNavButtons {
     margin: 0 0 0 25px;
     display: flex;
@@ -39,6 +41,7 @@ body {
     align-items: center;
 
 }
+
 .navButton {
     margin: 0 20px 0 20px;
     font-family: 'Roboto';
@@ -47,6 +50,7 @@ body {
     text-decoration: none;
     transition: all 0.2s;
 }
+
 .hoverNavButton:hover {
     transform: scale(1.2, 1.2);
     color: black;
@@ -56,6 +60,7 @@ body {
     justify-self: center;
     align-self: center;
 }
+
 .picture {
     height: 500px;
     width: 300px;
@@ -77,6 +82,7 @@ body {
     font-size: 36px;
     color: #E76F51;
 }
+
 .detailsText {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
@@ -98,6 +104,7 @@ body {
     padding: 10px 30px;
     transition: all 1s;
 }
+
 .hoverAddToCartButton:hover {
     transform: scale(1.2, 1.2);
     box-shadow: 0 2px 20px 2px #383838;

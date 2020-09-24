@@ -15,30 +15,31 @@ import javax.servlet.http.HttpSession;
 public class SignUpController {
 
     private UserAccounts userlist;
+
     public SignUpController(UserAccounts userlist) {
         this.userlist = userlist;
     }
 
     @GetMapping("/SignUp")
-    public String signUp(Model model, HttpSession session,@ModelAttribute User user){
-        if (session.isNew()){
+    public String signUp(Model model, HttpSession session, @ModelAttribute User user) {
+        if (session.isNew()) {
             model.addAttribute("passfail", false);
             return "SignUp";
-        } else{
+        } else {
             session.getAttribute("user");
             return "SignUp";
         }
     }
 
     @PostMapping("/SignUp")
-    public String creatUser(@ModelAttribute User user, Model model, HttpSession session){
-            if (user.isPasswordEqual()){
-                userlist.addUserToList(user);
-                return "signin";
-            } else {
-                session.getAttribute("user");
-                model.addAttribute("passfail", true);
-                return "SignUp";
-            }
+    public String creatUser(@ModelAttribute User user, Model model, HttpSession session) {
+        if (user.isPasswordEqual()) {
+            userlist.addUserToList(user);
+            return "signin";
+        } else {
+            session.getAttribute("user");
+            model.addAttribute("passfail", true);
+            return "SignUp";
+        }
     }
 }

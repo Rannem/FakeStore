@@ -16,6 +16,7 @@ body {
     justify-content: center;
     flex-wrap: wrap;;
 }
+
 .navigation {
     width: 1518px;
     height: 50px;
@@ -24,12 +25,14 @@ body {
     align-items: center;
     justify-content: space-between;
 }
+
 .logo {
     background-image: url(Assets/logo.svg);
     height: 50px;
     width: 50px;
     margin: 0 25px 0 0;
 }
+
 .allNavButtons {
     margin: 0 0 0 25px;
     display: flex;
@@ -37,6 +40,7 @@ body {
     align-items: center;
 
 }
+
 .navButton {
     margin: 0 20px 0 20px;
     font-family: 'Roboto';
@@ -52,15 +56,18 @@ body {
     align-items: center;
     transition: all 1s;
 }
+
 .signIn {
     border: 1px solid white;
     border-radius: 30px;
     padding: 10px 30px;
 }
+
 .hoverNavButton:hover {
     transform: scale(1.2, 1.2);
     color: white;
 }
+
 .headerText {
     position: relative;
     bottom: 40px;
@@ -70,6 +77,7 @@ body {
     text-align: center;
     align-items: center;
 }
+
 .bigText {
     font-family: 'Archivo';
     font-weight: 900;
@@ -77,12 +85,14 @@ body {
     color: white;
     margin: 15px;
 }
+
 .smallText {
     font-family: 'Roboto';
     font-size: 18px;
     color: white;
     margin: 15px;
 }
+
 .discoverButton {
     width: 205px;
     margin: 15px;
@@ -96,15 +106,18 @@ body {
     padding: 10px 30px;
     transition: all 1s;
 }
+
 .hoverDiscover:hover {
     transform: scale(1.2, 1.2);
     box-shadow: 0 2px 20px 2px #383838;
 }
+
 main {
     background-color: #FAF4F2;
     width: 100%;
     height: 2290px;
 }
+
 .topGrid {
     position: relative;
     bottom: 105px;
@@ -113,6 +126,7 @@ main {
     grid-template-columns: repeat(auto-fit, minmax(357px, 1fr));
     gap: 15px;
 }
+
 .gridBox {
     background: white;
     border: 1px solid white;
@@ -125,6 +139,7 @@ main {
     align-items: center;
     box-shadow: 0 1px 5px #d4d4d4;
 }
+
 .medal1 {
     margin: 10px 40px 10px 45px;
     background-image: url(Assets/medal1.svg);
@@ -133,6 +148,7 @@ main {
     height: 85px;
     width: 85px;
 }
+
 .medal2 {
     margin: 10px 40px;
     background-image: url(Assets/medal2.svg);
@@ -141,6 +157,7 @@ main {
     height: 85px;
     width: 85px;
 }
+
 .medal3 {
     margin: 10px 40px;
     background-image: url(Assets/medal3.svg);
@@ -149,6 +166,7 @@ main {
     height: 85px;
     width: 85px;
 }
+
 .medal4 {
     margin: 10px 40px;
     background-image: url(Assets/medal4.svg);
@@ -157,6 +175,7 @@ main {
     height: 85px;
     width: 85px;
 }
+
 .gridboxH4 {
     margin: 10px 40px;
     font-family: 'Archivo';
@@ -164,12 +183,14 @@ main {
     font-size: 18px;
     color: #3B3735;
 }
+
 .gridboxText {
     margin: 10px 40px;
     font-family: 'Roboto';
     font-size: 16px;
     color: #3B3735;
 }
+
 .middleGrid {
     width: 456px;
     margin: 10px 732px 30px 720px;
@@ -178,6 +199,7 @@ main {
     justify-content: center;
 
 }
+
 .middelPic {
     margin: 20px;
     background-image: url(assets/discover.svg);
@@ -187,6 +209,7 @@ main {
     width: 90px;
     justify-self: center;
 }
+
 .middelText {
     margin: 10px 40px;
     font-family: 'Archivo';
@@ -196,12 +219,14 @@ main {
     text-align: center;
     justify-self: center;
 }
+
 .destinationGrid {
     margin: 0 201px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(357px, 1fr));
     gap: 15px;
 }
+
 .destinationGridBoxes {
     padding: 40px;
     background: white;
@@ -211,6 +236,7 @@ main {
     box-shadow: 0 1px 5px #d4d4d4;
     display: grid;
 }
+
 .priceBox {
     position: relative;
     bottom: 30px;
@@ -227,6 +253,7 @@ main {
     justify-self: center;
     text-align: center;
 }
+
 .destinationGridBoxesHeader {
     position: relative;
     bottom: 40px;
@@ -237,6 +264,7 @@ main {
     justify-self: center;
     text-align: center;
 }
+
 .destinationGridBoxesText {
     position: relative;
     bottom: 30px;
@@ -247,6 +275,7 @@ main {
     justify-self: center;
     text-align: center;
 }
+
 .readMoreButton {
     width: 185px;
     font-family: 'Roboto';
@@ -261,14 +290,17 @@ main {
     text-align: center;
     transition: all 1s;
 }
+
 .readMoreForm {
     justify-self: center;
     text-align: center;
 }
+
 .hoverReadMore:hover {
     transform: scale(1.1, 1.1);
     box-shadow: 0 2px 10px 2px #d4d4d4;
 }
+
 .destinationPicture {
     background-size: cover;
     background-position: center;
@@ -286,6 +318,7 @@ main {
     grid-template-rows: 1fr;
     justify-content: center;
 }
+
 .veiwAll {
     width: 205px;
     font-family: 'Roboto';
@@ -299,6 +332,7 @@ main {
     text-align: center;
     transition: all 1s;
 }
+
 .veiwAll:hover {
     transform: scale(1.2, 1.2);
     box-shadow: 0 2px 20px 2px #d4d4d4;

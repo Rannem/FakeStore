@@ -2,8 +2,10 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet">
     <meta name="description" content="signup">
     <meta name="keywords" content="FakeStore, signup, newprofile">
     <meta name="author" content="Sindre">
@@ -28,9 +30,9 @@
                 <label class="email">E-mail</label>
                 <input class="email1" th:field="*{eMail}">
                 <label class="phonenumber">Phone number </label>
-                <input  class="phonenumber1" th:field="*{phoneNumber}">
+                <input class="phonenumber1" th:field="*{phoneNumber}">
                 <label class="dayofbirth">Day of birth</label>
-                <input class="dayofbirth1" type="date"  th:field="*{dayOfBirth}">
+                <input class="dayofbirth1" type="date" th:field="*{dayOfBirth}">
                 <label class="username">Username </label>
                 <input class="username1" th:field="*{userName}">
                 <label class="password">Password </label>
@@ -43,7 +45,7 @@
                 <input class="zipcode1" th:field="*{zipCode}">
                 <span class="error" th:if="${passfail}">Error: Password does not match!</span>
                 <div class="loginbuttom form-actions">
-                    <button type="submit"  class="login btb hoverDiscover" >LOGIN</button>
+                    <button type="submit" class="login btb hoverDiscover">LOGIN</button>
                 </div>
             </form>
         </div>

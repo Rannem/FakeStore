@@ -26,12 +26,12 @@ public class SignInController {
     }
 
     @PostMapping("/signin")
-        public String login(@RequestParam String username, @RequestParam String password, Model model) {
-        if (loginAuthenticator.access(username, password) == true){
+    public String login(@RequestParam String username, @RequestParam String password, Model model) {
+        if (loginAuthenticator.access(username, password) == true) {
             model.addAttribute("user", this.userAccounts.getUser(username));
             return "myprofile";
-        }else{
-        model.addAttribute("PasswordIsWrong", true);
+        } else {
+            model.addAttribute("PasswordIsWrong", true);
             return "signin";
         }
     }
