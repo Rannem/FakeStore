@@ -1,5 +1,8 @@
 package no.fakestore.fakestore;
 
+import javax.persistence.Entity;
+
+@Entity
 public class User {
     private String firstName;
     private String lastName;
