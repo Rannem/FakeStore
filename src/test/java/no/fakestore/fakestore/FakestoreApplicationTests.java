@@ -12,9 +12,9 @@ public class FakestoreApplicationTests {
         LoginAuthenticator test = new LoginAuthenticator(new UserAccounts());
         Assert.assertTrue(test.access("sindre", "123"));
         Assert.assertFalse(test.access("Ranem", "test123"));
-    }*/
+    }
 
-    /*@Test
+    @Test
     public void shouldGetAcces(){
         Assert.assertEquals;
     }*/
