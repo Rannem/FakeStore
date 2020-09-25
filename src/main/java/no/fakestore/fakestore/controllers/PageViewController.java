@@ -1,9 +1,6 @@
-package no.fakestore.fakestore;
+package no.fakestore.fakestore.controllers;
 
-import no.fakestore.fakestore.Book;
-import no.fakestore.fakestore.BookLibrary;
-import no.fakestore.fakestore.GameLibrary;
-import no.fakestore.fakestore.MovieLibrary;
+import no.fakestore.fakestore.*;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,15 +15,14 @@ import java.util.List;
 @RequestMapping("/Page")
 public class PageViewController {
 
-    private BookLibrary bookLibrary;
-    private MovieLibrary movieLibrary;
-    private GameLibrary gameLibrary;
-    private int currentPage;
+    private BookRepo bookRepo;
+    private MovieRepo movieRepo;
+    private GameRepo gameRepo;
 
-    public PageViewController(BookLibrary bookLibrary, MovieLibrary movieLibrary, GameLibrary gameLibrary) {
-        this.bookLibrary = bookLibrary;
-        this.movieLibrary = movieLibrary;
-        this.gameLibrary = gameLibrary;
+    public PageViewController(BookRepo bookRepo, MovieRepo movieRepo, GameRepo gameRepo) {
+        this.bookRepo = bookRepo;
+        this.movieRepo = movieRepo;
+        this.gameRepo = gameRepo;
     }
 
     @GetMapping("/Book")

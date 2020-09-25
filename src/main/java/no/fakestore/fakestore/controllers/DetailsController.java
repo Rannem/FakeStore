@@ -1,8 +1,6 @@
 package no.fakestore.fakestore.controllers;
 
-import no.fakestore.fakestore.BookLibrary;
-import no.fakestore.fakestore.GameLibrary;
-import no.fakestore.fakestore.MovieLibrary;
+import no.fakestore.fakestore.*;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,14 +12,14 @@ import org.springframework.web.bind.annotation.RequestParam;
 @RequestMapping("/Details")
 public class DetailsController {
 
-    private BookLibrary bookLibrary;
-    private MovieLibrary movieLibrary;
-    private GameLibrary gameLibrary;
+    private BookRepo bookRepo;
+    private MovieRepo movieRepo;
+    private GameRepo gameRepo;
 
-    public DetailsController(BookLibrary bookLibrary, MovieLibrary movieLibrary, GameLibrary gameLibrary) {
-        this.bookLibrary = bookLibrary;
-        this.movieLibrary = movieLibrary;
-        this.gameLibrary = gameLibrary;
+    public DetailsController(BookRepo bookRepo, MovieRepo movieRepo, GameRepo gameRepo) {
+        this.bookRepo = bookRepo;
+        this.movieRepo = movieRepo;
+        this.gameRepo = gameRepo;
     }
 
     @GetMapping("/Book")

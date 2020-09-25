@@ -1,5 +1,10 @@
 package no.fakestore.fakestore;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "movies")
 public class Movie extends Product {
 
     private String title;
@@ -13,8 +18,11 @@ public class Movie extends Product {
     private String recommendedAgeInfo;
     private String photo;
 
-    public Movie(String price, int productId, String title, String director, String writer, MovieGenre genre, String duration, String starring, String shortDescription, String releaseDate, String recommendedAgeInfo, String photo) {
-        super(price, productId, "Movie");
+    public Movie() {
+    }
+
+    public Movie(String price, String title, String director, String writer, MovieGenre genre, String duration, String starring, String shortDescription, String releaseDate, String recommendedAgeInfo, String photo) {
+        super(price);
         this.title = title;
         this.director = director;
         this.writer = writer;

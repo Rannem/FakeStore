@@ -9,21 +9,21 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class HomeController {
 
-    private BookLibrary bookLibrary;
-    private MovieLibrary movieLibrary;
-    private GameLibrary gameLibrary;
+    private BookRepo bookRepo;
+    private MovieRepo movieRepo;
+    private GameRepo gameRepo;
 
-    public HomeController(BookLibrary bookLibrary, MovieLibrary movieLibrary, GameLibrary gameLibrary) {
-        this.bookLibrary = bookLibrary;
-        this.movieLibrary = movieLibrary;
-        this.gameLibrary = gameLibrary;
+    public HomeController(BookRepo bookRepo, MovieRepo movieRepo, GameRepo gameRepo) {
+        this.bookRepo = bookRepo;
+        this.movieRepo = movieRepo;
+        this.gameRepo = gameRepo;
     }
 
     @GetMapping("/Home")
     public String home(Model model) {
-        model.addAttribute("books", this.bookLibrary.getBooks());
-        model.addAttribute("movies", this.movieLibrary.getMovies());
-        model.addAttribute("games", this.gameLibrary.getGames());
+        model.addAttribute("books", bookRepo.findAll());
+        model.addAttribute("movies", movieRepo.findAll());
+        model.addAttribute("game", gameRepo.findAll());
         return "Home";
     }
 

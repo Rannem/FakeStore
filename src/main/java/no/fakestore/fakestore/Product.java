@@ -12,15 +12,12 @@ public class Product {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int productId;
     private String price;
-    private String productType;
 
     public Product() {
     }
 
-    public Product(String price, int productId, String productType) {
+    public Product(String price) {
         this.price = price;
-        this.productId = productId;
-        this.productType = productType;
     }
 
     public String getPrice() {
@@ -29,9 +26,5 @@ public class Product {
 
     public int getProductId() {
         return productId;
-    }
-
-    public String getProductType() {
-        return productType;
     }
 }
