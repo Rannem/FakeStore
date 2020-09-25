@@ -1,4 +1,6 @@
-package no.fakestore.fakestore;
+package no.fakestore.fakestore.Movie;
+
+import no.fakestore.fakestore.Product;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;

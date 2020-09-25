@@ -1,5 +1,9 @@
 package no.fakestore.fakestore;
 
+import no.fakestore.fakestore.Book.Book;
+import no.fakestore.fakestore.Game.Game;
+import no.fakestore.fakestore.Movie.Movie;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
