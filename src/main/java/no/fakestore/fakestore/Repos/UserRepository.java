@@ -1,5 +1,6 @@
-package no.fakestore.fakestore;
+package no.fakestore.fakestore.Repos;
 
+import no.fakestore.fakestore.User;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 

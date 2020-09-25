@@ -28,7 +28,7 @@
     <section>
         <div class="profil">
             <h3 th:text="Profil"></h3>
-            <div th:object="${user}" class="newUser">
+            <div th:object="${session.user}" class="newUser">
                 <label class="firstname">Firstname: </label>
                 <label class="firstname1" th:text="*{firstName}">firstname</label>
                 <label class="lastname">Lastname: </label>

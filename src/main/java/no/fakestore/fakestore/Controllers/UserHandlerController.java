@@ -2,7 +2,7 @@ package no.fakestore.fakestore.Controllers;
 
 
 import no.fakestore.fakestore.User;
-import no.fakestore.fakestore.UserRepository;
+import no.fakestore.fakestore.Repos.UserRepository;
 import no.fakestore.fakestore.UserValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -11,12 +11,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import javax.validation.Valid;
 import org.springframework.validation.BindingResult;
 
 import javax.servlet.http.HttpSession;
-import javax.validation.Validation;
-import javax.validation.Validator;
 
 @Controller
 public class UserHandlerController {
@@ -31,9 +28,7 @@ public class UserHandlerController {
     * */
     //må finne en metode for å finne riktig bruker
     @GetMapping("/profile")
-    public String showProfile(Model model) {
-        model.addAttribute("user", repository.findUserById(1));
-       //model.addAttribute("user", user.getUserList().get(1));
+    public String showProfile() {
         return "myprofile";
     }
 
@@ -43,24 +38,23 @@ public class UserHandlerController {
 
     @GetMapping("/signin")
     public String login() {
-        return "signin";
+
+            return "signin";
     }
 
     @PostMapping("/signin")
-    public String login(@RequestParam String username, @RequestParam String password, Model model) {
+    public String login(@RequestParam String username, @RequestParam String password, Model model, HttpSession session) {
         User tempUser = null;
-        try {
-            tempUser = repository.findUserByUserName(username);
-            if(tempUser.getUserName().equals(username) && tempUser.getPassWord().equals(password)){
-                model.addAttribute("user", tempUser);
-
-                return "myprofile";
-            } else {
-                model.addAttribute("PasswordIsWrong", true);
-                return "signin";
-            }
-        } catch (NullPointerException e){
-            return "/signin";
+        if(session.getAttribute("user") != null){
+            return "redirect:/profile";
+        }
+        tempUser = repository.findUserByUserName(username);
+        if (tempUser.getUserName().equals(username) && tempUser.getPassWord().equals(password)) {
+            session.setAttribute("user", tempUser);
+            return "myprofile";
+        } else {
+            model.addAttribute("PasswordIsWrong", true);
+            return "signin";
         }
     }
 
