@@ -1,7 +1,9 @@
 package no.fakestore.fakestore.controllers;
 
+
 import no.fakestore.fakestore.User;
 import no.fakestore.fakestore.UserRepository;
+import no.fakestore.fakestore.UserValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -9,9 +11,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import javax.validation.Valid;
+import org.springframework.validation.BindingResult;
 
 import javax.servlet.http.HttpSession;
-import javax.validation.Valid;
+import javax.validation.Validation;
+import javax.validation.Validator;
 
 @Controller
 public class UserHandlerController {
@@ -76,7 +81,15 @@ public class UserHandlerController {
     }
 
     @PostMapping("/SignUp")
-    public String creatUser(@Valid User user, Model model, HttpSession session) {
+    public String creatUser(@ModelAttribute User user, Model model, HttpSession session, BindingResult br) {
+        UserValidator validation = new UserValidator();
+        if(validation.supports(user.getClass())){
+            validation.validate(user, br);
+        }
+        if (br.hasErrors()){
+            return "SignUp";
+        }
+
         if (user.isPasswordEqual()) {
             repository.save(user);
             return "signin";
