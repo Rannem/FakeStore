@@ -37,7 +37,7 @@ public class PopulateTables {
         gameRepo.save(new Game("29.99", "Inertial Drift", "PQube", "PS4, Xbox, Switch", GameGenre.SPORTS, "It's been a long road but we're finally here.", "September 11, 2020", "Suitable for 7+", "/Assets/inertial.jpg"));
         gameRepo.save(new Game("49.99", "Past Cure", "Phantom 8 Studio", "PC", GameGenre.ACTION, "A former elite soldier tries to uncover his past.", "February 23, 2018", "Suitable for 18+", "/Assets/Pastcure.jpg"));
 
-        userRepository.save(new User("Sindre Broholm", "Sæther", Gender.MALE, "Sindreset@gmail.com", "004793071137", "1993-07-19", "sindre", "123", "123", "Movollen 100","7091"));
+        userRepository.save(new User("Sindre Broholm", "Sæther", Gender.MALE, "Sindreset@gmail.com", "004793071137", "1993-07-19", "sindre", "123123", "123123", "Movollen 100","7091"));
 
     }
 }
