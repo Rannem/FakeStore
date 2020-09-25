@@ -21,8 +21,8 @@ public class Book extends Product {
         super();
     }
 
-    public Book(String price, int productId, String title, String author, String publisher, BookGenre genre, String shortDescription, String releaseDate, String language, String recommendedAgeInfo, String photo) {
-        super(price, productId, "Book");
+    public Book(String price, String title, String author, String publisher, BookGenre genre, String shortDescription, String releaseDate, String language, String recommendedAgeInfo, String photo) {
+        super(price);
         this.title = title;
         this.author = author;
         this.publisher = publisher;
@@ -70,21 +70,4 @@ public class Book extends Product {
         return photo;
     }
 
-    @Override
-    public String toString() {
-
-        return String.format("Titel: %s, by: %s, Genre: %s", title, author, genre);
-
-       /* return "Book{" +
-                "title='" + title + '\'' +
-                ", author='" + author + '\'' +
-                ", publisher='" + publisher + '\'' +
-                ", genre=" + genre +
-                ", shortDescription='" + shortDescription + '\'' +
-                ", releaseDate='" + releaseDate + '\'' +
-                ", language='" + language + '\'' +
-                ", recommendedAgeInfo='" + recommendedAgeInfo + '\'' +
-                ", photo='" + photo + '\'' +
-                '}';*/
-    }
 }
