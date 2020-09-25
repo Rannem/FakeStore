@@ -1,5 +1,8 @@
 package no.fakestore.fakestore;
 
+import no.fakestore.fakestore.Book.Book;
+import no.fakestore.fakestore.Game.Game;
+import no.fakestore.fakestore.Movie.Movie;
 import org.springframework.data.domain.*;
 import org.springframework.stereotype.Service;
 import no.fakestore.fakestore.Repos.BookRepo;

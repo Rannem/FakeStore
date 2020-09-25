@@ -1,4 +1,4 @@
-package no.fakestore.fakestore;
+package no.fakestore.fakestore.Movie;
 
 public enum MovieGenre {
 

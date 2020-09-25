@@ -1,37 +1,34 @@
-package no.fakestore.fakestore;
+package no.fakestore.fakestore.Game;
+
+import no.fakestore.fakestore.Product;
 
 import javax.persistence.Entity;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "books")
-public class Book extends Product {
+@Table(name = "games")
+public class Game extends Product {
 
     private String title;
-    private String author;
-    private String publisher;
-    private BookGenre genre;
+    private String developer;
+    private String platform;
+    private GameGenre genre;
     private String shortDescription;
     private String releaseDate;
-    private String language;
     private String recommendedAgeInfo;
     private String photo;
 
-    public Book() {
-        super();
+    public Game() {
     }
 
-    public Book(String price, String title, String author, String publisher, BookGenre genre, String shortDescription, String releaseDate, String language, String recommendedAgeInfo, String photo) {
+    public Game(String price, String title, String developer, String platform, GameGenre genre, String shortDescription, String releaseDate, String recommendedAgeInfo, String photo) {
         super(price);
         this.title = title;
-        this.author = author;
-        this.publisher = publisher;
+        this.developer = developer;
+        this.platform = platform;
         this.genre = genre;
         this.shortDescription = shortDescription;
         this.releaseDate = releaseDate;
-        this.language = language;
         this.recommendedAgeInfo = recommendedAgeInfo;
         this.photo = photo;
     }
@@ -40,15 +37,15 @@ public class Book extends Product {
         return title;
     }
 
-    public String getAuthor() {
-        return author;
+    public String getDeveloper() {
+        return developer;
     }
 
-    public String getPublisher() {
-        return publisher;
+    public String getPlatform() {
+        return platform;
     }
 
-    public BookGenre getGenre() {
+    public GameGenre getGenre() {
         return genre;
     }
 
@@ -60,10 +57,6 @@ public class Book extends Product {
         return releaseDate;
     }
 
-    public String getLanguage() {
-        return language;
-    }
-
     public String getRecommendedAgeInfo() {
         return recommendedAgeInfo;
     }
@@ -71,6 +64,4 @@ public class Book extends Product {
     public String getPhoto() {
         return photo;
     }
-
-
 }
