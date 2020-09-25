@@ -1,20 +1,14 @@
 package no.fakestore.fakestore.Controllers;
 
 import no.fakestore.fakestore.*;
+import org.springframework.ui.Model;
 import no.fakestore.fakestore.Repos.BookRepo;
 import no.fakestore.fakestore.Repos.GameRepo;
 import no.fakestore.fakestore.Repos.MovieRepo;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-
-import javax.servlet.http.HttpSession;
-import java.util.ArrayList;
-import java.util.List;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequestMapping("/Page")
@@ -33,10 +27,9 @@ public class PageViewController {
     }
 
     @GetMapping("/Book")
-    public ResponseEntity<List<Book>> getAllEmployees(@RequestParam(defaultValue = "0") Integer pageNo, @RequestParam(defaultValue = "3") Integer pageSize, @RequestParam(defaultValue = "name") String sortBy) {
-        List<Book> list = pageinator.getAllBooks(pageNo, pageSize, sortBy);
-
-        return new ResponseEntity<List<Book>>(list, new HttpHeaders(), HttpStatus.OK);
+    public String getBooks(Model model, @RequestParam(defaultValue = "1") Integer pageNo, @RequestParam(defaultValue = "3") Integer pageSize, @RequestParam(defaultValue = "title") String sortBy) {
+        model.addAttribute("page", pageinator.getAllBooks(pageNo - 1, pageSize, sortBy));
+        return "PageOfBooks";
     }
 
 

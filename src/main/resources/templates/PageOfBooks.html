@@ -16,7 +16,7 @@
         <section class="allNavButtons">
             <figure class="logo"></figure>
             <a class="navButton hoverNavButton" th:href="@{/Home}">Home</a>
-            <a class="navButton hoverNavButton" th:href="@{/Page/Book}">Books</a>
+            <a class="navButton hoverNavButton" th:href="@{/Page/Book?pageNo=}">Books</a>
             <a class="navButton hoverNavButton" th:href="@{/Page/Movie}">Movies</a>
             <a class="navButton hoverNavButton" th:href="@{/Page/Game}">Games</a>
             <a class="navButton hoverNavButton" th:href="@{/cart}">Cart</a>
@@ -24,23 +24,23 @@
     </nav>
     <main class="productGrid">
         <h3>List of books</h3>
-        <ul class="bookTitle" th:each="book : ${session.pageOfBooks}">
-            <a class="bookLink" th:href="'/books/details?bookId=' + ${book.productId}" th:text="${book.title}"></a>
+        <ul class="bookTitle" th:each="book : ${page.content}">
+            <a class="bookLink" th:href="'/details/books?productId=' + ${book.productId}" th:text="${book.title}"></a>
             <ul>
                 <li class="bookDetail" th:text="'Author: ' + ${book.author}"></li>
                 <li class="bookDetail" th:text="'Price: ' + ${book.price}"></li>
             </ul>
         </ul>
         <br>
-        <a class="pageLink" th:if="${session.currentPage} != 0" th:href="'/books?page=' + ${session.prev}">Prev</a>
+        <a class="pageLink" th:href="'/Page/Book? + ${page.number} - 1">Prev</a>
         <a class="pageLink" th:if="${page} < ${session.currentPage}" th:each="page : ${session.numOfPages}"
            th:text="${page} + 1" th:href="'/books?page=' + ${page}"></a>
         <a class="pageLink activeLink" th:if="${page} == ${session.currentPage}" th:each="page : ${session.numOfPages}"
            th:text="${page} + 1"></a>
         <a class="pageLink" th:if="${page} > ${session.currentPage}" th:each="page : ${session.numOfPages}"
            th:text="${page} + 1" th:href="'/books?page=' + ${page}"></a>
-        <a class="pageLink" th:if="${session.currentPage} != ${session.totNumPages}"
-           th:href="'/books?page=' + ${session.next}">Next</a>
+        <a class="pageLink"
+           th:href="'/Page/Book? + ${page.number} + 1">Next</a>
     </main>
 </section>
 </body>
