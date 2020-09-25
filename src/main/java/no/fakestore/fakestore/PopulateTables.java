@@ -12,12 +12,14 @@ public class PopulateTables {
     private BookRepo bookRepo;
     private MovieRepo movieRepo;
     private GameRepo gameRepo;
+    private CartRepository cartRepository;
     private UserRepository userRepository;
 
-    public PopulateTables(BookRepo bookRepo, MovieRepo movieRepo, GameRepo gameRepo, UserRepository userRepository) {
+    public PopulateTables(BookRepo bookRepo, MovieRepo movieRepo, GameRepo gameRepo, CartRepository cartRepository, UserRepository userRepository) {
         this.bookRepo = bookRepo;
         this.movieRepo = movieRepo;
         this.gameRepo = gameRepo;
+        this.cartRepository = cartRepository;
         this.userRepository = userRepository;
     }
 

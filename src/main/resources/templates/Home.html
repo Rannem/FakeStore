@@ -22,8 +22,10 @@
             <a class="navButton hoverNavButton" href="/cart">Cart</a>
         </section>
         <section class="loginButtons">
-            <a class="navButton hoverNavButton" th:href="@{/SignUp}">Sign up</a>
-            <a class="navButton signIn hoverNavButton" th:href="@{/signin}">Sign in</a>
+            <a th:if="${islogedin == true}" class="navButton hoverNavButton" th:href="@{/profile}">Profile</a>
+            <a th:if="${islogedin == true}" class="navButton signIn hoverNavButton" th:href="@{/signout}">Sign out</a>
+            <a th:if="${islogedin == false}" class="navButton hoverNavButton" th:href="@{/SignUp}">Sign up</a>
+            <a th:if="${islogedin == false}" class="navButton signIn hoverNavButton" th:href="@{/signin}">Sign in</a>
         </section>
     </nav>
     <section class="headerText">
