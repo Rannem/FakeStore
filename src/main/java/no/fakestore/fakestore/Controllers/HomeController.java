@@ -1,6 +1,5 @@
 package no.fakestore.fakestore.Controllers;
 
-import no.fakestore.fakestore.*;
 import no.fakestore.fakestore.Repos.BookRepo;
 import no.fakestore.fakestore.Repos.GameRepo;
 import no.fakestore.fakestore.Repos.MovieRepo;

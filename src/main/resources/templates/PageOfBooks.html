@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.Thymeleaf.org">
 <head>
-    <link rel="stylesheet" href="/stylesPageOfBooks.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap">
+    <link rel="stylesheet" href="/stylesPageOf.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
     <meta charset="UTF-8">
     <meta name="description" content="product">
     <meta name="keywords" content="FakeStore, Detail, Product">
@@ -16,7 +16,7 @@
         <section class="allNavButtons">
             <figure class="logo"></figure>
             <a class="navButton hoverNavButton" th:href="@{/Home}">Home</a>
-            <a class="navButton hoverNavButton" th:href="@{/Page/Book?pageNo=}">Books</a>
+            <a class="navButton hoverNavButton" th:href="@{/Page/Book}">Books</a>
             <a class="navButton hoverNavButton" th:href="@{/Page/Movie}">Movies</a>
             <a class="navButton hoverNavButton" th:href="@{/Page/Game}">Games</a>
             <a class="navButton hoverNavButton" th:href="@{/cart}">Cart</a>
@@ -24,23 +24,27 @@
     </nav>
     <main class="productGrid">
         <h3>List of books</h3>
-        <ul class="bookTitle" th:each="book : ${page.content}">
-            <a class="bookLink" th:href="'/details/books?productId=' + ${book.productId}" th:text="${book.title}"></a>
+        <ul class="title" th:each="book : ${page.content}">
+            <a class="link" th:href="'/Details/Book?productId=' + ${book.productId}" th:text="${book.title}"></a>
             <ul>
-                <li class="bookDetail" th:text="'Author: ' + ${book.author}"></li>
-                <li class="bookDetail" th:text="'Price: ' + ${book.price}"></li>
+                <li class="detail" th:text="'Author: ' + ${book.author}"></li>
+                <li class="detail" th:text="'Price: ' + ${book.price}"></li>
             </ul>
         </ul>
-        <br>
-        <a class="pageLink" th:href="'/Page/Book? + ${page.number} - 1">Prev</a>
-        <a class="pageLink" th:if="${page} < ${session.currentPage}" th:each="page : ${session.numOfPages}"
-           th:text="${page} + 1" th:href="'/books?page=' + ${page}"></a>
-        <a class="pageLink activeLink" th:if="${page} == ${session.currentPage}" th:each="page : ${session.numOfPages}"
-           th:text="${page} + 1"></a>
-        <a class="pageLink" th:if="${page} > ${session.currentPage}" th:each="page : ${session.numOfPages}"
-           th:text="${page} + 1" th:href="'/books?page=' + ${page}"></a>
-        <a class="pageLink"
-           th:href="'/Page/Book? + ${page.number} + 1">Next</a>
+        <nobr>
+        <span th:if="${page.hasPrevious()}">
+            <a class="pageLink" th:href="@{/Page/Book(pageNo=${page.number})}">Previous</a>
+        </span>
+        <th:block th:each="i: ${#numbers.sequence(0, page.totalPages - 1)}">
+            <span th:if="${page.number == i}" class="selected pageLink">[[${i}+1]]</span>
+            <span th:unless="${page.number == i}">
+             <a class="pageLink" th:href="@{/Page/Book(pageNo=${i+1})}">[[${i}+1]]</a>
+        </span>
+        </th:block>
+        <span th:if="${page.hasNext()}">
+            <a class="pageLink" th:href="@{/Page/Book(pageNo=${page.number+2})}">Next</a>
+        </span>
+        </nobr>
     </main>
 </section>
 </body>

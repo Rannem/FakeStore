@@ -67,13 +67,13 @@ body {
 }
 
 .productGrid {
+    margin-left: 55px;
     grid-area: Info;
     width: 287px;
     height: 296px;
     display: grid;
     grid-template-rows: repeat(auto-fit, 1fr);
     justify-self: center;
-    align-self: center;
 }
 
 .productH3 {
@@ -111,7 +111,6 @@ body {
 }
 
 .pageLink {
-    margin: 4px;
     text-decoration: none;
     color: black;
     background-color: lightgray;
@@ -126,7 +125,7 @@ body {
     color: white;
 }
 
-.gameLink {
+.link {
     text-decoration: none;
     color: #E76F51;
 }
