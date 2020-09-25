@@ -1,4 +1,4 @@
-package no.fakestore.fakestore.controllers;
+package no.fakestore.fakestore.Controllers;
 
 import no.fakestore.fakestore.User;
 import no.fakestore.fakestore.UserRepository;

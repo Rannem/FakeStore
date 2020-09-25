@@ -66,28 +66,28 @@
         </p>
     </section>
     <section class="destinationGrid">
-        <div class="destinationGridBoxes" th:each="book, stat : ${books}">
+        <div class="destinationGridBoxes" th:each="book : ${books}">
             <figure class="destinationPicture" th:style="${'background-image: url(' + book.photo + ');'}"></figure>
             <div class="priceBox" th:text="'$' + ${book.price}"></div>
             <h4 class="destinationGridBoxesHeader" th:text="${book.title}"></h4>
             <p class="destinationGridBoxesText" th:text="${book.shortDescription}"></p>
-            <a class="readMoreButton hoverReadMore" th:href="${'/Details/Book?x='+ stat.index }">Read More</a>
+            <a class="readMoreButton hoverReadMore" th:href="'/Details/Book?productId=' + ${book.productId}">Read More</a>
         </div>
 
-        <div class="destinationGridBoxes" th:each="movie, stat : ${movies}">
+        <div class="destinationGridBoxes" th:each="movie : ${movies}">
             <figure class="destinationPicture" th:style="${'background-image: url(' + movie.photo + ');'}"></figure>
             <div class="priceBox" th:text="'$' + ${movie.price}"></div>
             <h4 class="destinationGridBoxesHeader" th:text="${movie.title}"></h4>
             <p class="destinationGridBoxesText" th:text="${movie.shortDescription}"></p>
-            <a class="readMoreButton hoverReadMore" th:href="${'/Details/Movie?x=' + stat.index }">Read More</a>
+            <a class="readMoreButton hoverReadMore" th:href="'/Details/Movie?productId=' + ${movie.productId}">Read More</a>
         </div>
 
-        <div class="destinationGridBoxes" th:each="game, stat : ${games}">
+        <div class="destinationGridBoxes" th:each="game : ${games}">
             <figure class="destinationPicture" th:style="${'background-image: url(' + game.photo + ');'}"></figure>
             <div class="priceBox" th:text="'$' + ${game.price}"></div>
             <h4 class="destinationGridBoxesHeader" th:text="${game.title}"></h4>
             <p class="destinationGridBoxesText" th:text="${game.shortDescription}"></p>
-            <a class="readMoreButton hoverReadMore" th:href="${'/Details/Game?x='+ stat.index }">Read More</a>
+            <a class="readMoreButton hoverReadMore" th:href="'/Details/Game?productId=' + ${game.productId}">Read More</a>
         </div>
 
     </section>

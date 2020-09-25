@@ -4,8 +4,7 @@ public enum Gender {
 
     OTHER("Prefer not to tell"),
     MALE("Male"),
-    FEMALE("Female"),
-    ;
+    FEMALE("Female");
 
     private final String displayName;
 

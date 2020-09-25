@@ -1,5 +1,8 @@
 package no.fakestore.fakestore;
 
+import no.fakestore.fakestore.Repos.BookRepo;
+import no.fakestore.fakestore.Repos.GameRepo;
+import no.fakestore.fakestore.Repos.MovieRepo;
 import org.springframework.stereotype.Service;
 
 @Service
