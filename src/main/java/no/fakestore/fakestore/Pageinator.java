@@ -19,12 +19,21 @@ public class Pageinator {
         this.gameRepo = gameRepo;
     }
 
-    public Page<Book> getAllBooks(Integer pageNo, Integer pageSize, String sortBy) {
+    public Slice<Book> getAllBooks(Integer pageNo) {
+        Pageable pageable = PageRequest.of(pageNo, 1, Sort.by("title").ascending());
+        Slice<Book> pagedResult = bookRepo.findAll(pageable);
+        return pagedResult;
+    }
 
-        PageRequest paging = PageRequest.of(pageNo, pageSize, Sort.by(sortBy).ascending());
+    public Slice<Movie> getAllMovies(Integer pageNo) {
+        Pageable pageable = PageRequest.of(pageNo, 1, Sort.by("title").ascending());
+        Slice<Movie> pagedResult = movieRepo.findAll(pageable);
+        return pagedResult;
+    }
 
-        Page<Book> pagedResult = bookRepo.findAll(paging);
-
+    public Slice<Game> getAllGames(Integer pageNo) {
+        Pageable pageable = PageRequest.of(pageNo, 1, Sort.by("title").ascending());
+        Slice<Game> pagedResult = gameRepo.findAll(pageable);
         return pagedResult;
     }
 }

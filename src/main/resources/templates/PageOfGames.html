@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.Thymeleaf.org">
 <head>
-    <link rel="stylesheet" href="/stylesPageOfGames.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap">
+    <link rel="stylesheet" href="/stylesPageOf.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
     <meta charset="UTF-8">
     <meta name="description" content="product">
     <meta name="keywords" content="FakeStore, Detail, Product">
@@ -24,23 +24,27 @@
     </nav>
     <main class="productGrid">
         <h3>List of games</h3>
-        <ul class="gameTitle" th:each="game : ${session.pageOfGames}">
-            <a class="gameLink" th:href="'/games/details?gameId=' + ${game.productId}" th:text="${game.title}"></a>Game?x=1
+        <ul class="title" th:each="game : ${page.content}">
+            <a class="link" th:href="'/Details/Game?productId=' + ${game.productId}" th:text="${game.title}"></a>
             <ul>
-                <li class="gameDetail" th:text="'Developer: ' + ${game.developer}"></li>
-                <li class="gameDetail" th:text="'Price: ' + ${game.price}"></li>
+                <li class="detail" th:text="'Developer: ' + ${game.developer}"></li>
+                <li class="detail" th:text="'Price: ' + ${game.price}"></li>
             </ul>
         </ul>
-        <br>
-        <a class="pageLink" th:if="${session.currentPage} != 0" th:href="'/games?page=' + ${session.prev}">Prev</a>
-        <a class="pageLink" th:if="${page} < ${session.currentPage}" th:each="page : ${session.numOfPages}"
-           th:text="${page} + 1" th:href="'/games?page=' + ${page}"></a>
-        <a class="pageLink activeLink" th:if="${page} == ${session.currentPage}" th:each="page : ${session.numOfPages}"
-           th:text="${page} + 1"></a>
-        <a class="pageLink" th:if="${page} > ${session.currentPage}" th:each="page : ${session.numOfPages}"
-           th:text="${page} + 1" th:href="'/games?page=' + ${page}"></a>
-        <a class="pageLink" th:if="${session.currentPage} != ${session.totNumPages}"
-           th:href="'/games?page=' + ${session.next}">Next</a>
+        <nobr>
+        <span th:if="${page.hasPrevious()}">
+            <a class="pageLink" th:href="@{/Page/Game(pageNo=${page.number})}">Previous</a>
+        </span>
+            <th:block th:each="i: ${#numbers.sequence(0, page.totalPages - 1)}">
+                <span th:if="${page.number == i}" class="selected pageLink">[[${i}+1]]</span>
+                <span th:unless="${page.number == i}">
+             <a class="pageLink" th:href="@{/Page/Game(pageNo=${i+1})}">[[${i}+1]]</a>
+        </span>
+            </th:block>
+            <span th:if="${page.hasNext()}">
+            <a class="pageLink" th:href="@{/Page/Game(pageNo=${page.number+2})}">Next</a>
+        </span>
+        </nobr>
     </main>
 </section>
 </body>
