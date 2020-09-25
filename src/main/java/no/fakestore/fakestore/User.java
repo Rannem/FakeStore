@@ -22,19 +22,22 @@ public class User {
     private String lastName;
 
     private Gender gender = Gender.OTHER;
+
     @Email(message = "Enter a valid E-Mail address")
     private String eMail;
 
     private String phoneNumber;
+
     @NotEmpty
     private String dayOfBirth;
 
     @Size(min = 3, max = 100, message = "The username most be 3 characters long ")
+    @Column(unique = true)
     private String userName;
 
     @Size(min = 6, max = 250, message = "The password must have 6 characters")
     private String passWord;
-    @Size(min = 6, max = 250)
+    @Size(min = 6, max = 250, message = "The passwords must match")
     private String confirmPassWord;
 
 

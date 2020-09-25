@@ -8,6 +8,7 @@
 
 body {
     height: 100vh;
+
 }
 
 main {
@@ -30,6 +31,7 @@ main > section {
 main > section > .newUser {
     grid-area: login;
     width: 500px;
+    max-height: 700px;
 }
 
 main > section > .newUser > h3 {
@@ -41,11 +43,11 @@ main > section > .newUser > h3 {
 }
 
 form {
-    height: 500px;
     margin: 5px 40px;
+    height: 700px;
     display: grid;
     gap: 10px 10px;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr;
     justify-content: space-evenly;
     align-content: center;
@@ -60,7 +62,8 @@ form {
     "confirmpassword confirmpassword1"
     "address address1"
     "zipcode zipcode1"
-    "error submit";
+    "error submit"
+    "errorlist errorlist";
 }
 
 .firstname {
@@ -110,9 +113,21 @@ form {
 .error {
     grid-area: error;
 }
+.errorlist {
+    grid-area: errorlist;
+}
 
 .loginbuttom {
     grid-area: submit;
+}
+form > input {
+    width: 100%;
+    padding: 3px;
+    size: 10px;
+}
+
+.filderror {
+    border: 1px solid red;
 }
 
 form > .loginbuttom > button {
