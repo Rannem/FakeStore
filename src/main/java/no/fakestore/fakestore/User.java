@@ -2,15 +2,13 @@ package no.fakestore.fakestore;
 
 import org.hibernate.validator.constraints.UniqueElements;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 
 @Entity
+@Table(name = "users")
 public class User {
 
     @Id
@@ -32,7 +30,6 @@ public class User {
     private String dayOfBirth;
 
     @Size(min = 3, max = 100, message = "The username most be 3 characters long ")
-    @UniqueElements
     private String userName;
 
     @Size(min = 6, max = 250, message = "The password must have 6 characters")
@@ -58,6 +55,54 @@ public class User {
         this.passWord = passWord;
         this.confirmPassWord = confirmPassWord;
         this.address = address;
+        this.zipCode = zipCode;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public void setGender(Gender gender) {
+        this.gender = gender;
+    }
+
+    public void seteMail(String eMail) {
+        this.eMail = eMail;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public void setDayOfBirth(String dayOfBirth) {
+        this.dayOfBirth = dayOfBirth;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public void setPassWord(String passWord) {
+        this.passWord = passWord;
+    }
+
+    public void setConfirmPassWord(String confirmPassWord) {
+        this.confirmPassWord = confirmPassWord;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public void setZipCode(String zipCode) {
         this.zipCode = zipCode;
     }
 

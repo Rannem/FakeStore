@@ -1,3 +1,4 @@
+/*
 package no.fakestore.fakestore;
 
 import org.springframework.stereotype.Service;
@@ -16,10 +17,11 @@ public class LoginAuthenticator {
             System.out.println("worked");
             return true;
         } else {
-            System.out.println("get a account you filthy dwarf");
+            System.out.println("No account found!");
         }
 
         System.out.println("Error, dev fucked up");
         return false;
     }
 }
+*/
