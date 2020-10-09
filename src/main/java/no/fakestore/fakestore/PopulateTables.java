@@ -10,7 +10,7 @@ import no.fakestore.fakestore.Repos.*;
 import org.springframework.stereotype.Service;
 
 @Service
-public class PopulateTables {
+public class    PopulateTables {
 
     private BookRepo bookRepo;
     private MovieRepo movieRepo;

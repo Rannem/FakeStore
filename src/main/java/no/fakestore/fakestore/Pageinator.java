@@ -39,6 +39,8 @@ public class Pageinator {
         Slice<Game> pagedResult = gameRepo.findAll(pageable);
         return pagedResult;
     }
+
+
 }
 
 

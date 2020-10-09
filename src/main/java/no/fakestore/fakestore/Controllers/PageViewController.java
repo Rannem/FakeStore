@@ -34,4 +34,12 @@ public class PageViewController {
         model.addAttribute("page", pageinator.getAllGames(pageNo - 1));
         return "PageOfGames";
     }
+
+    @GetMapping("/Product")
+    public String getProducts(Model model, @RequestParam(defaultValue = "1") Integer pageNo) {
+        model.addAttribute("pageBook", pageinator.getAllBooks(pageNo - 1));
+        model.addAttribute("pageMovie", pageinator.getAllMovies(pageNo - 1));
+        model.addAttribute("pageGame", pageinator.getAllGames(pageNo - 1));
+        return "PageOfProducts";
+    }
 }

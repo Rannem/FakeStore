@@ -39,7 +39,12 @@
         </form>
     </main>
     <header class="productPic">
-        <img class="picture" th:src="${book.photo}">
+        <div th:if="${book.title != 'Peer to peer'}">
+            <img class="picture" th:src="${book.photo}">
+        </div>
+        <div th:if="${book.title == 'Peer to peer'}">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/FRbyF5E0gXw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
     </header>
 </section>
 </body>

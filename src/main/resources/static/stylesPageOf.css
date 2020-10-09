@@ -67,7 +67,6 @@ body {
 }
 
 .productGrid {
-    margin-left: 55px;
     grid-area: Info;
     width: 287px;
     height: 296px;
