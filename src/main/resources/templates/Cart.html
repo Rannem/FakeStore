@@ -24,10 +24,10 @@
         </section>
     </nav>
     <main class="productGrid">
-        <ul class="cartlist" th:each="product : ${cartlist}">
-            <li th:text="'Title: ' + ${product.title}"></li>
-            <li th:text="'$' + ${product.price}"></li>
-            <img class="productPic" th:src="${product.photo}">
+        <ul class="cartlist" th:each="item : ${cart}">
+            <li th:text="'Title: ' + ${item.title}"></li>
+            <li th:text="'$' + *{price}"></li>
+            <img class="productPic" th:src="*{photo}">
         </ul>
         <p class="totalSum" th:text="'$' + ${total}"></p>
     </main>

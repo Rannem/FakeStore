@@ -7,5 +7,5 @@ import java.util.List;
 
 public interface BookRepo extends PagingAndSortingRepository<Book, Integer> {
     //Counts how many books there are to add to list
-    List<Book> findAllByProductId(int id);
+
 }
