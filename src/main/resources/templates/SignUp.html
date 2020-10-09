@@ -55,9 +55,11 @@
                 <input class="zipcode1" th:field="*{zipCode}">
 
                 <span class="error" th:if="${passfail}">Error: Password does not match!</span>
+
                 <div class="loginbuttom form-actions">
                     <button type="submit" class="login btb hoverDiscover">LOGIN</button>
                 </div>
+
                 <ul class="errorlist">
                     <li th:each="err : ${#fields.errors('*')}" th:text="${err}"></li>
                 </ul>

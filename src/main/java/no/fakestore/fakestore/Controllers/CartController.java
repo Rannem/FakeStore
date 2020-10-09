@@ -2,8 +2,8 @@ package no.fakestore.fakestore.Controllers;
 
 import no.fakestore.fakestore.Cart;
 import no.fakestore.fakestore.CartItem;
-import no.fakestore.fakestore.CartRepository;
 import no.fakestore.fakestore.Repos.BookRepo;
+import no.fakestore.fakestore.Repos.CartRepository;
 import no.fakestore.fakestore.Repos.GameRepo;
 import no.fakestore.fakestore.Repos.MovieRepo;
 import no.fakestore.fakestore.User;
@@ -12,7 +12,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-
 import javax.servlet.http.HttpSession;
 
 @Controller

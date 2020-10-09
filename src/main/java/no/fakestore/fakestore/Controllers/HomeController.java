@@ -12,9 +12,11 @@ import javax.servlet.http.HttpSession;
 @Controller
 public class HomeController {
 
+    boolean userLogedIn = false;
     private BookRepo bookRepo;
     private MovieRepo movieRepo;
     private GameRepo gameRepo;
+
 
 
     public HomeController(BookRepo bookRepo, MovieRepo movieRepo, GameRepo gameRepo) {
@@ -22,7 +24,7 @@ public class HomeController {
         this.movieRepo = movieRepo;
         this.gameRepo = gameRepo;
     }
-    boolean userLogedIn = false;
+
     @GetMapping("/Home")
     public String home(Model model, HttpSession session) {
         model.addAttribute("islogedin", userLogedIn);

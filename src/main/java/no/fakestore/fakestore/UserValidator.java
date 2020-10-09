@@ -18,6 +18,5 @@ public class UserValidator implements org.springframework.validation.Validator{
         ValidationUtils.rejectIfEmpty(errors, "userName", "userName.empty", "Username must be over 3 characters long");
         ValidationUtils.rejectIfEmpty(errors, "passWord", "passWord.empty", "Password must be over 6 characters long");
         ValidationUtils.rejectIfEmpty(errors, "confirmPassWord", "confirmPassWord.empty", "Password must match!");
-
     }
 }

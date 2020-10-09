@@ -26,7 +26,7 @@ public class UserHandlerController {
     /*
     * Profile
     * */
-    //må finne en metode for å finne riktig bruker
+
     @GetMapping("/profile")
     public String showProfile() {
         return "myprofile";
@@ -61,7 +61,6 @@ public class UserHandlerController {
     /*
     * Sign up
     * */
-
 
     @GetMapping("/SignUp")
     public String signUp(Model model, HttpSession session, @ModelAttribute User user) {
